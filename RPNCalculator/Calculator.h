@@ -4,7 +4,7 @@
 #include <QMainWindow>
 
 namespace Ui {
-class Calculator;
+    class Calculator;
 }
 
 class Calculator : public QMainWindow
