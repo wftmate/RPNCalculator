@@ -13,20 +13,21 @@ class Calculator : public QMainWindow
 
 public:
     explicit Calculator(QWidget *parent = 0);
-    ~MainWindow();
+    ~Calculator();
 
 private:
     Ui::Calculator *ui;
 
 private slots:
-    void NumPress();
+    void NumPressed();
     void MathButtons();
     //void FncButtons();
-    //void RollUp();
-    //void RollDn();
-    //void Swap();
+    void StackButtons();
+        //void RollUp();
+        //void RollDn();
+        //void Swap();
+        //void Drop();
     //void Undo();
-    //void ClearLast();
     //void ClearAll();
     //void Enter();
 
