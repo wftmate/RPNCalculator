@@ -15,7 +15,7 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="7" column="0" colspan="2">
+    <item row="6" column="0" colspan="2">
      <widget class="QPushButton" name="Button0">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -25,13 +25,13 @@
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-	background-color: darkgrey;
+	background-color: darkgray;
 	border: 1px solid gray;
 	padding: 5px;
 }
 
 QPushButton:pressed {
-	background-color: #Dimgrey;
+	background-color: Dimgray;
 	border: 1px solid gray;
 	padding: 5px;
 }</string>
@@ -41,7 +41,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="6" column="3">
+    <item row="5" column="3">
      <widget class="QPushButton" name="Subtract">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -67,7 +67,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="6" column="4">
+    <item row="5" column="4">
      <widget class="QPushButton" name="YtoX">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -93,7 +93,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="7" column="5">
+    <item row="6" column="5">
      <widget class="QPushButton" name="LogBase2">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -119,7 +119,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="4" column="4">
+    <item row="3" column="4">
      <widget class="QPushButton" name="Square">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -145,7 +145,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="3" column="2">
+    <item row="2" column="2">
      <widget class="QPushButton" name="Swap">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -171,7 +171,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="3" column="4">
+    <item row="2" column="4">
      <widget class="QPushButton" name="Drop">
       <property name="styleSheet">
        <string notr="true">QPushButton {
@@ -191,7 +191,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="4" column="3">
+    <item row="3" column="3">
      <widget class="QPushButton" name="Multiply">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -217,7 +217,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="4" column="2">
+    <item row="3" column="2">
      <widget class="QPushButton" name="Button9">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -227,13 +227,13 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-	background-color: darkgrey;
+	background-color: darkgray;
 	border: 1px solid gray;
 	padding: 5px;
 }
 
 QPushButton:pressed {
-	background-color: #Dimgrey;
+	background-color: Dimgray;
 	border: 1px solid gray;
 	padding: 5px;
 }</string>
@@ -243,7 +243,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="3" column="3">
+    <item row="2" column="3">
      <widget class="QPushButton" name="Undo">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -269,7 +269,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="6" column="2">
+    <item row="5" column="2">
      <widget class="QPushButton" name="Button3">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -279,13 +279,13 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-	background-color: darkgrey;
+	background-color: darkgray;
 	border: 1px solid gray;
 	padding: 5px;
 }
 
 QPushButton:pressed {
-	background-color: #Dimgrey;
+	background-color: Dimgray;
 	border: 1px solid gray;
 	padding: 5px;
 }</string>
@@ -295,7 +295,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="5" column="4">
+    <item row="4" column="4">
      <widget class="QPushButton" name="SquareRoot">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -321,7 +321,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="3" column="0">
+    <item row="2" column="0">
      <widget class="QPushButton" name="RollUp">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -347,7 +347,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="5" column="2">
+    <item row="4" column="2">
      <widget class="QPushButton" name="Button6">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -357,13 +357,13 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-	background-color: darkgrey;
+	background-color: darkgray;
 	border: 1px solid gray;
 	padding: 5px;
 }
 
 QPushButton:pressed {
-	background-color: #Dimgrey;
+	background-color: Dimgray;
 	border: 1px solid gray;
 	padding: 5px;
 }</string>
@@ -373,7 +373,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="5" column="0">
+    <item row="4" column="0">
      <widget class="QPushButton" name="Button4">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -383,13 +383,13 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-	background-color: darkgrey;
+	background-color: darkgray;
 	border: 1px solid gray;
 	padding: 5px;
 }
 
 QPushButton:pressed {
-	background-color: #Dimgrey;
+	background-color: Dimgray;
 	border: 1px solid gray;
 	padding: 5px;
 }</string>
@@ -399,7 +399,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="5" column="1">
+    <item row="4" column="1">
      <widget class="QPushButton" name="Button5">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -409,13 +409,13 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-	background-color: darkgrey;
+	background-color: darkgray;
 	border: 1px solid gray;
 	padding: 5px;
 }
 
 QPushButton:pressed {
-	background-color: #Dimgrey;
+	background-color: Dimgray;
 	border: 1px solid gray;
 	padding: 5px;
 }</string>
@@ -425,7 +425,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="4" column="1">
+    <item row="3" column="1">
      <widget class="QPushButton" name="Button8">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -435,13 +435,13 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-	background-color: darkgrey;
+	background-color: darkgray;
 	border: 1px solid gray;
 	padding: 5px;
 }
 
 QPushButton:pressed {
-	background-color: #Dimgrey;
+	background-color: Dimgray;
 	border: 1px solid gray;
 	padding: 5px;
 }</string>
@@ -451,7 +451,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="7" column="3">
+    <item row="6" column="3">
      <widget class="QPushButton" name="Add">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -477,7 +477,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="3" column="1">
+    <item row="2" column="1">
      <widget class="QPushButton" name="RollDn">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -503,7 +503,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="5" column="5">
+    <item row="4" column="5">
      <widget class="QPushButton" name="NaturalLog">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -529,7 +529,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="6" column="1">
+    <item row="5" column="1">
      <widget class="QPushButton" name="Button2">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -539,13 +539,13 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-	background-color: darkgrey;
+	background-color: darkgray;
 	border: 1px solid gray;
 	padding: 5px;
 }
 
 QPushButton:pressed {
-	background-color: #Dimgrey;
+	background-color: Dimgray;
 	border: 1px solid gray;
 	padding: 5px;
 }</string>
@@ -555,7 +555,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="5" column="3">
+    <item row="4" column="3">
      <widget class="QPushButton" name="Divide">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -581,7 +581,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="6" column="0">
+    <item row="5" column="0">
      <widget class="QPushButton" name="Button1">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -591,13 +591,13 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-	background-color: darkgrey;
+	background-color: darkgray;
 	border: 1px solid gray;
 	padding: 5px;
 }
 
 QPushButton:pressed {
-	background-color: #Dimgrey;
+	background-color: Dimgray;
 	border: 1px solid gray;
 	padding: 5px;
 }</string>
@@ -607,8 +607,8 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="2" column="0" colspan="6">
-     <widget class="QLineEdit" name="Display">
+    <item row="1" column="0" colspan="6">
+     <widget class="QLineEdit" name="Input">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -636,7 +636,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="3" column="5">
+    <item row="2" column="5">
      <widget class="QPushButton" name="ClearAll">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -662,7 +662,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="4" column="0">
+    <item row="3" column="0">
      <widget class="QPushButton" name="Button7">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -672,13 +672,13 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-	background-color: darkgrey;
+	background-color: darkgray;
 	border: 1px solid gray;
 	padding: 5px;
 }
 
 QPushButton:pressed {
-	background-color: #Dimgrey;
+	background-color: Dimgray;
 	border: 1px solid gray;
 	padding: 5px;
 }</string>
@@ -688,7 +688,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="7" column="2">
+    <item row="6" column="2">
      <widget class="QPushButton" name="DecimalPoint">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -698,13 +698,13 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-	background-color: darkgrey;
+	background-color: darkgray;
 	border: 1px solid gray;
 	padding: 5px;
 }
 
 QPushButton:pressed {
-	background-color: #Dimgrey;
+	background-color: Dimgray;
 	border: 1px solid gray;
 	padding: 5px;
 }</string>
@@ -714,7 +714,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="6" column="5">
+    <item row="5" column="5">
      <widget class="QPushButton" name="LogBase10">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -740,7 +740,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="7" column="4">
+    <item row="6" column="4">
      <widget class="QPushButton" name="Inverse">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -766,7 +766,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="4" column="5">
+    <item row="3" column="5">
      <widget class="QPushButton" name="ChangeSign">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -792,7 +792,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="8" column="3" colspan="3">
+    <item row="7" column="3" colspan="3">
      <widget class="QPushButton" name="Enter">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -818,11 +818,8 @@ QPushButton:pressed {
       </property>
      </widget>
     </item>
-    <item row="1" column="0" colspan="6">
-     <widget class="QTableView" name="tableView"/>
-    </item>
     <item row="0" column="0" colspan="6">
-     <widget class="QListView" name="listView"/>
+     <widget class="QListWidget" name="Display"/>
     </item>
    </layout>
   </widget>

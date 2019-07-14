@@ -20,17 +20,23 @@ private:
 
 private slots:
     void NumPressed();
-    void MathButtons();
+    void MathButtonPressed();
     //void FncButtons();
-    void StackButtons();
+    void StackButtonPressed();
         //void RollUp();
         //void RollDn();
         //void Swap();
         //void Drop();
     //void Undo();
     //void ClearAll();
-    //void Enter();
+    void EnterPressed();
 
+void StackOperations(int);
+void ShiftUp();
+void ShiftDown();
+void Swap();
+
+void PopulateDisplay();
 };
 
 #endif // Calculator_H
