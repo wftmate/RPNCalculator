@@ -142,20 +142,31 @@ void Calculator::StackButtonPressed(){
 void Calculator::EnterPressed(){
 
     double input = 0.0; // create a variable to temporarily store input from lineEdit
+
     QString inputValue = ui->Input->text(); // take input from the lineEdit
+    ui->Input->clear();                     // clear text from input lineEdit
+
     int operation = 1;
-    StackOperations(operation);// shift all elements in the stack up one
-    stack[0] = (double)input; // store input in Stack[0]
+    StackOperations(operation); // shift all elements in the stack up one
+    stack[0] = (double)input;   // store input in Stack[0]
     PopulateDisplay();
 }
 
 void Calculator::SquarePressed(){
-//    QString inputValue = ui->Input->text();
-//    QString string = "text";
-//    ui->Input->setText("text");
 
+    // some random test code
 //    double number = 789;
 //    ui->Input->setText(QString::number(number, 'g', 4));
+
+    // if there's a number in the input, put it in the bottom of the stack
+    if(InputHasText()){
+        QString inputValue = ui->Input->text(); // get text from input lineEdit
+        ShiftUp(); // shift all elements in the stack up one
+        stack[0] = inputValue.toDouble(); // store inputValue string in stack as a double
+    } else {
+        // if there's no number in the input, just act on the first element in the stack
+        stack[0] = stack[0] * stack[0];
+    }
 }
 
 // -- END SLOT (Button Functions) ---------------------------------------------------------------------------
@@ -220,8 +231,11 @@ void Calculator::Swap(){
 // -- End Stack Operations -----------------------------------------------------------------------------------
 
 void Calculator::PopulateDisplay(){
-    for(int i = 0; i < (int)stack.size(); i++)
-    {
-        ui->Display->addItem(QString::number(stack[i]));
-    }
+    //ui->Display->clear();
+    ui->Display->addItem(QString::number(stack[0]));
+
+//    for(int i = 0; i < (int)stack.size(); i++)
+//    {
+//        ui->Display->addItem(QString::number(stack[i]));
+//    }
 }
