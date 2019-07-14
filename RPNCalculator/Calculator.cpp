@@ -1,5 +1,4 @@
 #include "Calculator.h"
-//#include "ui_mainwindow.h"
 #include "ui_Calculator.h"
 
 #include <array>
@@ -36,8 +35,8 @@ Calculator::Calculator(QWidget *parent) :
 //    connect(ui->Divide, SIGNAL(released()), this, SLOT(MathButtonPressed()));
 
     connect(ui->Enter, SIGNAL(released()), this, SLOT(EnterPressed()));
-    connect(ui->ChangeSign, SIGNAL(released), this, SLOT(ChangeSignPressed));
-    connect(ui->Square, SIGNAL(released), this, SLOT(SquarePressed));
+    connect(ui->ChangeSign, SIGNAL(released()), this, SLOT(ChangeSignPressed()));
+    connect(ui->Square, SIGNAL(released()), this, SLOT(SquarePressed()));
 }
 
 //Destructor
@@ -96,37 +95,37 @@ void Calculator::MathButtonPressed(){
 }
 
 void Calculator::ChangeSignPressed(){
-//    if(InputHasText()){                                     // if the lineEdit has text in it
-//    if(!ui->Input->text().isEmpty()){
-//        QString inputValue = ui->Input->text();             // get the text as a string
-//        double dblInputValue = inputValue.toDouble();       // turn the sting into a double
-//        dblInputValue = -1 * dblInputValue;                 // change sign of value in Input lineEdit
-//        ui->Input->setText(QString::number(dblInputValue)); // put dbleInputValue back into the Input lineEdit
-//    } else {
-//        stack[0] *= -1;// change sign of bottom value in stack
-//        // update display
-//    }
+    if(InputHasText()){                                     // if the lineEdit has text in it
+    //if(!ui->Input->text().isEmpty()){
+        QString inputValue = ui->Input->text();             // get the text as a string
+        double dblInputValue = inputValue.toDouble();       // turn the sting into a double
+        dblInputValue = -1 * dblInputValue;                 // change sign of value in Input lineEdit
+        ui->Input->setText(QString::number(dblInputValue)); // put dbleInputValue back into the Input lineEdit
+    } else {
+        stack[0] *= -1;// change sign of bottom value in stack
+        // update display
+    }
 
 //    QString inputValue = ui->Input->text();             // get the text as a string
 //    double dblInputValue = inputValue.toDouble();       // turn the sting into a double
 //    dblInputValue = -1 * dblInputValue;                 // change sign of value in Input lineEdit
 //    ui->Input->setText(QString::number(dblInputValue));
 
-    // Get the value in the display
-    QString displayVal = ui->Input->text();
+//    // Get the value in the display
+//    QString displayVal = ui->Input->text();
 
-    // Regular expression checks if it is a number
-    // plus sign
-    QRegExp reg("[-+]?[0-9.]*");
+//    // Regular expression checks if it is a number
+//    // plus sign
+//    QRegExp reg("[-+]?[0-9.]*");
 
-    // If it is a number change the sign
-    if(reg.exactMatch(displayVal)){
-        double dblDisplayVal = displayVal.toDouble();
-        double dblDisplayValSign = -1 * dblDisplayVal;
+//    // If it is a number change the sign
+//    if(reg.exactMatch(displayVal)){
+//        double dblDisplayVal = displayVal.toDouble();
+//        double dblDisplayValSign = -1 * dblDisplayVal;
 
-        // Put solution in display
-        ui->Input->setText(QString::number(dblDisplayValSign));
-    }
+//        // Put solution in display
+//        ui->Input->setText(QString::number(dblDisplayValSign));
+//    }
 }
 
 // This function handles the RollUp, RollDn, Swap, and Drop buttons
@@ -170,7 +169,7 @@ bool Calculator::InputHasText(){
     }
 }
 
-//-------Stack Stuff ----------------------------------------------------------------------------------------
+//-- Start Stack Operations ----------------------------------------------------------------------------------
 
 void Calculator::StackOperations(int operation){
     switch(operation)
@@ -218,6 +217,7 @@ void Calculator::Swap(){
     stack[1] = temp;
 }
 
+// -- End Stack Operations -----------------------------------------------------------------------------------
 
 void Calculator::PopulateDisplay(){
     for(int i = 0; i < (int)stack.size(); i++)
