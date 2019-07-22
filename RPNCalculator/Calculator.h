@@ -2,6 +2,8 @@
 #define CALCULATOR_H
 
 #include <QMainWindow>
+#include <QKeyEvent>
+#include <QAbstractButton>
 
 namespace Ui {
     class Calculator;
@@ -19,7 +21,7 @@ private:
     Ui::Calculator *ui;
 
 private slots:
-    void NumPressed();
+    void NumPressed(QAbstractButton *button);
     void MathButtonPressed();
     void ChangeSignPressed();
     void StackButtonPressed();
@@ -31,6 +33,9 @@ private slots:
     //void ClearAll();
     void EnterPressed();
     void SquarePressed();
+
+protected:
+    void keyPressEvent(QKeyEvent *event);
 
 void StackOperations(int);
 void ShiftUp();

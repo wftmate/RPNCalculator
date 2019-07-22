@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>465</width>
-    <height>522</height>
+    <width>330</width>
+    <height>530</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,8 +15,8 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="6" column="0" colspan="2">
-     <widget class="QPushButton" name="Button0">
+    <item row="11" column="2">
+     <widget class="QPushButton" name="DecimalPoint">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
         <horstretch>0</horstretch>
@@ -37,11 +37,217 @@ QPushButton:pressed {
 }</string>
       </property>
       <property name="text">
-       <string>0</string>
+       <string>.</string>
       </property>
+      <attribute name="buttonGroup">
+       <string notr="true">numberGroup</string>
+      </attribute>
      </widget>
     </item>
-    <item row="5" column="3">
+    <item row="9" column="1">
+     <widget class="QPushButton" name="Button2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: darkgray;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: Dimgray;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">numberGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QPushButton" name="Button7">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: darkgray;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: Dimgray;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>7</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">numberGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="2" column="4">
+     <widget class="QPushButton" name="ClearAll">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: #FFA500;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: #FF0000;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>CLA</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">stackFunctionGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="3" column="4" rowspan="9">
+     <widget class="QPushButton" name="Enter">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: #FFA500;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: #FF0000;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>ENTER</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">stackFunctionGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="QPushButton" name="Inverse">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: olive;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: #FF0000;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>1/x</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">mathFunctionGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QPushButton" name="ChangeSign">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: olive;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: #FF0000;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>+/-</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">mathFunctionGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QPushButton" name="Button8">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: darkgray;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: Dimgray;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>8</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">numberGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="9" column="3">
      <widget class="QPushButton" name="Subtract">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -51,7 +257,7 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-	background-color: olivedrab;
+	background-color: olive;
 	border: 1px solid gray;
 	padding: 5px;
 }
@@ -65,259 +271,37 @@ QPushButton:pressed {
       <property name="text">
        <string>-</string>
       </property>
+      <attribute name="buttonGroup">
+       <string notr="true">mathFunctionGroup</string>
+      </attribute>
      </widget>
     </item>
-    <item row="5" column="4">
-     <widget class="QPushButton" name="YtoX">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
+    <item row="1" column="0" colspan="5">
+     <widget class="QLabel" name="Input">
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: olivedrab;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: #FF0000;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
+       <string notr="true">background-color: #fff;</string>
       </property>
       <property name="text">
-       <string>y^x</string>
+       <string>TextLabel</string>
       </property>
-     </widget>
-    </item>
-    <item row="6" column="5">
-     <widget class="QPushButton" name="LogBase2">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
+      <property name="scaledContents">
+       <bool>false</bool>
       </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: olivedrab;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: #FF0000;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
-      <property name="text">
-       <string>log_2</string>
+      <property name="margin">
+       <number>2</number>
       </property>
-     </widget>
-    </item>
-    <item row="3" column="4">
-     <widget class="QPushButton" name="Square">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: olivedrab;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: #FF0000;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>x^2</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="2">
-     <widget class="QPushButton" name="Swap">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: #FFA500;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: #FF0000;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>Swap</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="4">
-     <widget class="QPushButton" name="Drop">
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: #FFA500;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: #FF0000;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>Drop</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="3">
-     <widget class="QPushButton" name="Multiply">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: olivedrab;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: #FF0000;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>*</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="2">
-     <widget class="QPushButton" name="Button9">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: darkgray;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: Dimgray;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>9</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="3">
-     <widget class="QPushButton" name="Undo">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: #FFA500;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: #FF0000;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>Undo</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="2">
-     <widget class="QPushButton" name="Button3">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: darkgray;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: Dimgray;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>3</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="4">
-     <widget class="QPushButton" name="SquareRoot">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: olivedrab;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: #FF0000;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>sqrt</string>
+      <property name="indent">
+       <number>5</number>
       </property>
      </widget>
     </item>
@@ -345,10 +329,13 @@ QPushButton:pressed {
       <property name="text">
        <string>Up</string>
       </property>
+      <attribute name="buttonGroup">
+       <string notr="true">stackFunctionGroup</string>
+      </attribute>
      </widget>
     </item>
-    <item row="4" column="2">
-     <widget class="QPushButton" name="Button6">
+    <item row="9" column="0">
+     <widget class="QPushButton" name="Button1">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
         <horstretch>0</horstretch>
@@ -369,11 +356,37 @@ QPushButton:pressed {
 }</string>
       </property>
       <property name="text">
-       <string>6</string>
+       <string>1</string>
       </property>
+      <attribute name="buttonGroup">
+       <string notr="true">numberGroup</string>
+      </attribute>
      </widget>
     </item>
-    <item row="4" column="0">
+    <item row="2" column="3">
+     <widget class="QPushButton" name="Drop">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: #FFA500;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: #FF0000;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Drop</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">stackFunctionGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="7" column="0">
      <widget class="QPushButton" name="Button4">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -397,9 +410,186 @@ QPushButton:pressed {
       <property name="text">
        <string>4</string>
       </property>
+      <attribute name="buttonGroup">
+       <string notr="true">numberGroup</string>
+      </attribute>
      </widget>
     </item>
-    <item row="4" column="1">
+    <item row="5" column="2">
+     <widget class="QPushButton" name="Button9">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: darkgray;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: Dimgray;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>9</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">numberGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="7" column="2">
+     <widget class="QPushButton" name="Button6">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: darkgray;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: Dimgray;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>6</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">numberGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QPushButton" name="Square">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: olive;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: #FF0000;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>x^2</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">mathFunctionGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QPushButton" name="Swap">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: #FFA500;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: #FF0000;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Swap</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">stackFunctionGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="4" column="2">
+     <widget class="QPushButton" name="LogBase10">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: olive;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: #FF0000;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>log_10</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">mathFunctionGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="4" column="3">
+     <widget class="QPushButton" name="LogBase2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: olive;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: #FF0000;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>log_2</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">mathFunctionGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="7" column="1">
      <widget class="QPushButton" name="Button5">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -423,10 +613,107 @@ QPushButton:pressed {
       <property name="text">
        <string>5</string>
       </property>
+      <attribute name="buttonGroup">
+       <string notr="true">numberGroup</string>
+      </attribute>
      </widget>
     </item>
     <item row="3" column="1">
-     <widget class="QPushButton" name="Button8">
+     <widget class="QPushButton" name="SquareRoot">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: olive;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: #FF0000;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>sqrt</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">mathFunctionGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="5">
+     <widget class="QListWidget" name="Display">
+      <property name="itemAlignment">
+       <set>Qt::AlignRight</set>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="3">
+     <widget class="QPushButton" name="Add">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: olive;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: #FF0000;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>+</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">mathFunctionGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="7" column="3">
+     <widget class="QPushButton" name="Multiply">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: olive;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: #FF0000;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>*</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">mathFunctionGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="9" column="2">
+     <widget class="QPushButton" name="Button3">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
         <horstretch>0</horstretch>
@@ -447,12 +734,15 @@ QPushButton:pressed {
 }</string>
       </property>
       <property name="text">
-       <string>8</string>
+       <string>3</string>
       </property>
+      <attribute name="buttonGroup">
+       <string notr="true">numberGroup</string>
+      </attribute>
      </widget>
     </item>
-    <item row="6" column="3">
-     <widget class="QPushButton" name="Add">
+    <item row="3" column="2">
+     <widget class="QPushButton" name="YtoX">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
         <horstretch>0</horstretch>
@@ -461,7 +751,7 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-	background-color: olivedrab;
+	background-color: olive;
 	border: 1px solid gray;
 	padding: 5px;
 }
@@ -473,8 +763,40 @@ QPushButton:pressed {
 }</string>
       </property>
       <property name="text">
-       <string>+</string>
+       <string>y^x</string>
       </property>
+      <attribute name="buttonGroup">
+       <string notr="true">mathFunctionGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QPushButton" name="NaturalLog">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: olive;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: #FF0000;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>ln</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">mathFunctionGroup</string>
+      </attribute>
      </widget>
     </item>
     <item row="2" column="1">
@@ -501,61 +823,12 @@ QPushButton:pressed {
       <property name="text">
        <string>Dn</string>
       </property>
+      <attribute name="buttonGroup">
+       <string notr="true">stackFunctionGroup</string>
+      </attribute>
      </widget>
     </item>
-    <item row="4" column="5">
-     <widget class="QPushButton" name="NaturalLog">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: olivedrab;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: #FF0000;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>ln</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="1">
-     <widget class="QPushButton" name="Button2">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: darkgray;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: Dimgray;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>2</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="3">
+    <item row="5" column="3">
      <widget class="QPushButton" name="Divide">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -565,7 +838,7 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-	background-color: olivedrab;
+	background-color: olive;
 	border: 1px solid gray;
 	padding: 5px;
 }
@@ -579,10 +852,13 @@ QPushButton:pressed {
       <property name="text">
        <string>/</string>
       </property>
+      <attribute name="buttonGroup">
+       <string notr="true">mathFunctionGroup</string>
+      </attribute>
      </widget>
     </item>
-    <item row="5" column="0">
-     <widget class="QPushButton" name="Button1">
+    <item row="11" column="0" colspan="2">
+     <widget class="QPushButton" name="Button0">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
         <horstretch>0</horstretch>
@@ -603,223 +879,12 @@ QPushButton:pressed {
 }</string>
       </property>
       <property name="text">
-       <string>1</string>
+       <string>0</string>
       </property>
+      <attribute name="buttonGroup">
+       <string notr="true">numberGroup</string>
+      </attribute>
      </widget>
-    </item>
-    <item row="1" column="0" colspan="6">
-     <widget class="QLineEdit" name="Input">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>18</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QLineEdit {
-	background-color: #grey;
-	border: 1px solid gray;
-}</string>
-      </property>
-      <property name="text">
-       <string>0.0</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="5">
-     <widget class="QPushButton" name="ClearAll">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: #FFA500;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: #FF0000;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>CLA</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QPushButton" name="Button7">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: darkgray;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: Dimgray;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>7</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="2">
-     <widget class="QPushButton" name="DecimalPoint">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: darkgray;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: Dimgray;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>.</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="5">
-     <widget class="QPushButton" name="LogBase10">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: olivedrab;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: #FF0000;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>log_10</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="4">
-     <widget class="QPushButton" name="Inverse">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: olivedrab;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: #FF0000;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>1/x</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="5">
-     <widget class="QPushButton" name="ChangeSign">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: olivedrab;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: #FF0000;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>+/-</string>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="3" colspan="3">
-     <widget class="QPushButton" name="Enter">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: #FFA500;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: #FF0000;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>ENTER</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0" colspan="6">
-     <widget class="QListWidget" name="Display"/>
     </item>
    </layout>
   </widget>
@@ -828,8 +893,8 @@ QPushButton:pressed {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>465</width>
-     <height>23</height>
+     <width>330</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>
@@ -846,4 +911,9 @@ QPushButton:pressed {
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
  <connections/>
+ <buttongroups>
+  <buttongroup name="numberGroup"/>
+  <buttongroup name="stackFunctionGroup"/>
+  <buttongroup name="mathFunctionGroup"/>
+ </buttongroups>
 </ui>
