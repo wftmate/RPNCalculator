@@ -79,8 +79,8 @@ void Calculator::NumPressed(QAbstractButton *button){
 // -- SLOTS (Button functions) --------------------------------------------------------------------------------
 
 // This function determines what to do when an operator button is pressed
-void Calculator::MathButtonPressed(){
-    QPushButton *button = (QPushButton *)sender();
+void Calculator::MathButtonPressed(QAbstractButton *button){
+    //QPushButton *button = (QPushButton *)sender();
     QString buttonValue = button->text();
     double result = NULL;
 
@@ -91,82 +91,62 @@ void Calculator::MathButtonPressed(){
         QString inputValue = ui->Input->text();
         // then act on the bottom two stack elements
     }
-    else
-    {
-        // if input is empty, just act on the bottom two stack elements
-        if(buttonValue == "Plus"){
-            result = stack[0] + stack[1];
-        } else if(buttonValue == "Subtract"){
-            result = stack[1] - stack[0];
-        } else if(buttonValue == "Divide"){
-            result = stack[1] / stack[0];
-        } else if(buttonValue == "Multiply"){
-            result = stack[1] * stack[0];
-        } else if(buttonValue == "x^2"){
-            result = pow(stack[0],2);
-        } else if(buttonValue == "sqrt"){
-            result = sqrt(stack[0]);
-        } else if(buttonValue == "y^x"){
-            result = pow(stack[1], stack[0]);
-        } else if(buttonValue == "1/x"){
-            result = 1 / stack[0];
-        } else if(buttonValue == "+/-"){
-            result = -1 * stack[0];
-        } else if(buttonValue == "ln"){
-            result = log(stack[0]);
-        }else if(buttonValue == "log_10"){
-            result = log10(stack[0]);
-        } else if(buttonValue == "log_2"){
-            result = log2(stack[0]);
-        }
+    // if input is empty, just act on the bottom two stack elements
+    if(buttonValue == "Plus"){
+        result = stack[0] + stack[1];
+    } else if(buttonValue == "Subtract"){
+        result = stack[1] - stack[0];
+    } else if(buttonValue == "Divide"){
+        result = stack[1] / stack[0];
+    } else if(buttonValue == "Multiply"){
+        result = stack[1] * stack[0];
+    } else if(buttonValue == "x^2"){
+        result = pow(stack[0],2);
+    } else if(buttonValue == "sqrt"){
+        result = sqrt(stack[0]);
+    } else if(buttonValue == "y^x"){
+        result = pow(stack[1], stack[0]);
+    } else if(buttonValue == "1/x"){
+        result = 1 / stack[0];
+    } else if(buttonValue == "+/-"){
+        result = -1 * stack[0];
+    } else if(buttonValue == "ln"){
+        result = log(stack[0]);
+    }else if(buttonValue == "log_10"){
+        result = log10(stack[0]);
+    } else if(buttonValue == "log_2"){
+        result = log2(stack[0]);
     }
+
     ShiftUp();
     stack[0] = result;
     PopulateDisplay();
 }
 
-void Calculator::ChangeSignPressed(){
-    if(InputHasText()){                                     // if the lineEdit has text in it
-    //if(!ui->Input->text().isEmpty()){
-        QString inputValue = ui->Input->text();             // get the text as a string
-        double dblInputValue = inputValue.toDouble();       // turn the sting into a double
-        dblInputValue = -1 * dblInputValue;                 // change sign of value in Input lineEdit
-        ui->Input->setText(QString::number(dblInputValue)); // put dbleInputValue back into the Input lineEdit
-    } else {
-        stack[0] *= -1;// change sign of bottom value in stack
-        // update display
-    }
-
-//    QString inputValue = ui->Input->text();             // get the text as a string
-//    double dblInputValue = inputValue.toDouble();       // turn the sting into a double
-//    dblInputValue = -1 * dblInputValue;                 // change sign of value in Input lineEdit
-//    ui->Input->setText(QString::number(dblInputValue));
-
-//    // Get the value in the display
-//    QString displayVal = ui->Input->text();
-
-//    // Regular expression checks if it is a number
-//    // plus sign
-//    QRegExp reg("[-+]?[0-9.]*");
-
-//    // If it is a number change the sign
-//    if(reg.exactMatch(displayVal)){
-//        double dblDisplayVal = displayVal.toDouble();
-//        double dblDisplayValSign = -1 * dblDisplayVal;
-
-//        // Put solution in display
-//        ui->Input->setText(QString::number(dblDisplayValSign));
-//    }
-}
-
 // This function handles the RollUp, RollDn, Swap, and Drop buttons
-void Calculator::StackButtonPressed(){
-
-    // roll up
-    // roll dn
-    // swap
-    // drop
-
+void Calculator::StackButtonPressed(QAbstractButton *button){
+    QString buttonValue = button->text();
+    double temp;
+    if(buttonValue == "UP"){ // roll up
+        temp = stack[stack.size()];
+        ShiftUp();
+        stack[0] = temp;
+    } else if(buttonValue == "Down"){ // roll dn
+        temp = stack[0];
+        ShiftDown();
+        stack[stack.size()] = temp;
+    } else if(buttonValue == "Swap"){ // swap
+        Swap();
+    } else if(buttonValue == "Drop"){ // drop
+        ShiftDown();
+        PopulateDisplay();
+    } else if(buttonValue == "CLA"){  // clear all
+        for(int i = 0; i <= stack.size(); i++){
+            stack[i] = 0;
+        }
+        ui->Display->clear();
+    }
+    PopulateDisplay();
 }
 
 // This function is responsible only for the ENTER button

@@ -22,9 +22,8 @@ private:
 
 private slots:
     void NumPressed(QAbstractButton *button);
-    void MathButtonPressed();
-    void ChangeSignPressed();
-    void StackButtonPressed();
+    void MathButtonPressed(QAbstractButton *button);
+    void StackButtonPressed(QAbstractButton *button);
         //void RollUp();
         //void RollDn();
         //void Swap();
