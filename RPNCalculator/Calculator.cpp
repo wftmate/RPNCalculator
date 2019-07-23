@@ -20,23 +20,7 @@ Calculator::Calculator(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    // create array for pushbuttons
-    QPushButton *numButtons[10];
-    for(int i = 0; i < 10; ++i)
-    {
-        QString buttonName = "Button" + QString::number(i);
-        numButtons[i] = Calculator::findChild<QPushButton *>(buttonName);
-        connect(numButtons[i], SIGNAL(released()), this, SLOT(NumPressed()));
-    }
-
-// Connect Signals and Slots (connect buttons to subroutines that handle buttons)
-//    connect(ui->Add, SIGNAL(released()), this, SLOT(MathButtonPressed()));
-//    connect(ui->Subtract, SIGNAL(released()), this, SLOT(MathButtonPressed()));
-//    connect(ui->Multiply, SIGNAL(released()), this, SLOT(MathButtonPressed()));
-//    connect(ui->Divide, SIGNAL(released()), this, SLOT(MathButtonPressed()));
-
     connect(ui->Enter, SIGNAL(pressed()), this, SLOT(EnterPressed()));
-    connect(ui->ChangeSign, SIGNAL(pressed()), this, SLOT(ChangeSignPressed()));
 
     // Connect all buttons on widget to functions
     // Connect Stack Functions
@@ -53,8 +37,7 @@ Calculator::~Calculator()
     delete ui;
 }
 
-// I really want numbers to remain on the lineEdit until enter is pressed
-// then they get added to the bottom of the stack
+// -- SLOTS (Button functions) --------------------------------------------------------------------------------
 
 // This function determines what to do when a number button is pressed
 void Calculator::NumPressed(QAbstractButton *button){
@@ -75,8 +58,6 @@ void Calculator::NumPressed(QAbstractButton *button){
         ui->Input->setText(QString::number(dblNewValue, 'g', scientificNotation));
     }
 }
-
-// -- SLOTS (Button functions) --------------------------------------------------------------------------------
 
 // This function determines what to do when an operator button is pressed
 void Calculator::MathButtonPressed(QAbstractButton *button){
@@ -163,24 +144,23 @@ void Calculator::EnterPressed(){
     PopulateDisplay();
 }
 
-void Calculator::SquarePressed(){
-
-    // some random test code
-//    double number = 789;
-//    ui->Input->setText(QString::number(number, 'g', 4));
-
-    // if there's a number in the input, put it in the bottom of the stack
-    if(InputHasText()){
-        QString inputValue = ui->Input->text(); // get text from input lineEdit
-        ShiftUp(); // shift all elements in the stack up one
-        stack[0] = inputValue.toDouble(); // store inputValue string in stack as a double
-    } else {
-        // if there's no number in the input, just act on the first element in the stack
-        stack[0] = stack[0] * stack[0];
-    }
-}
-
 // -- END SLOT (Button Functions) ---------------------------------------------------------------------------
+
+void Calculator::BackspacePressed(){
+    if(InputHasText()){
+        QString inputValue = ui->Input->text();      // get number from Input label as text string
+        int length = inputValue.size();              // get length of string
+        inputValue = inputValue.remove(length-1, 1); // remove last character
+        ui->Input->setText(inputValue);              // send text back to Input label
+    }
+//    if(InputHasText()){
+//        QString inputValue = ui->Input->text(); // get number from Input label as text string
+//        double inputNumber = inputValue.toDouble(); // convert text string to double
+//        inputNumber = inputNumber / 10.0; // number % 10: this should divide by 10 and drop decimal, effectively removing LSD
+//        inputValue = QString::number(inputNumber); // convert number back to string
+//        ui->Input->setText(inputValue); // put string back on Input label
+//    }
+}
 
 // function to check if the Input lineEdit currently has text
 bool Calculator::InputHasText(){
@@ -284,6 +264,9 @@ void Calculator::keyPressEvent(QKeyEvent *event){
         case Qt::Key_9:
             NumPressed(ui->Button9);
             break;
+        case Qt::Key_Period:
+            NumPressed(ui->DecimalPoint);
+            break;
     // Math Functions
         case Qt::Key_Slash:
             // call divide
@@ -301,10 +284,12 @@ void Calculator::keyPressEvent(QKeyEvent *event){
         case Qt::Key_Backspace:
             // if there's text in the input, remove last digit/.
             // if there's no text in the input, do nothing
+            BackspacePressed();
             break;
         case Qt::Key_Delete:
             // if there's text in the input, remove all
             // if there's no text in the input, drop the lowest item in the stack
+            StackButtonPressed(ui->ClearAll);
             break;
         case Qt::Key_Up:
             ShiftUp();

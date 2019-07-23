@@ -14,7 +14,7 @@ class Calculator : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit Calculator(QWidget *parent = 0);
+    explicit Calculator(QWidget *parent = Q_NULLPTR);
     ~Calculator();
 
 private:
@@ -24,25 +24,19 @@ private slots:
     void NumPressed(QAbstractButton *button);
     void MathButtonPressed(QAbstractButton *button);
     void StackButtonPressed(QAbstractButton *button);
-        //void RollUp();
-        //void RollDn();
-        //void Swap();
-        //void Drop();
-    //void Undo();
-    //void ClearAll();
     void EnterPressed();
-    void SquarePressed();
 
 protected:
     void keyPressEvent(QKeyEvent *event);
 
-void StackOperations(int);
-void ShiftUp();
-void ShiftDown();
-void Swap();
+    void StackOperations(int);
+    void ShiftUp();
+    void ShiftDown();
+    void Swap();
 
-void PopulateDisplay();
-bool InputHasText();
+    void PopulateDisplay();
+    bool InputHasText();
+    void BackspacePressed();
 };
 
 #endif // Calculator_H
