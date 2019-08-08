@@ -13,6 +13,7 @@
 
 // initialize an array called "stack" of type double and some size
 std::array<double, 10> stack; // equivalent to: :double stack[10];"
+int stackOperationsUp = 1;
 
 Calculator::Calculator(QWidget *parent) :
     QMainWindow(parent),
@@ -21,6 +22,7 @@ Calculator::Calculator(QWidget *parent) :
     ui->setupUi(this);
 
     connect(ui->Enter, SIGNAL(pressed()), this, SLOT(EnterPressed()));
+    connect(ui->RollUp, SIGNAL(pressed()), this, SLOT(ShiftUp()));
 
     // Connect all buttons on widget to functions
     // Connect Stack Functions
@@ -65,21 +67,28 @@ void Calculator::MathButtonPressed(QAbstractButton *button){
     QString buttonValue = button->text();
     double result = NULL;
 
+    qDebug() << "MathButtonPressed: Button = " + buttonValue;
+
     // If there's anything sitting on the lineEdit, add that to the stack first
     if(!ui->Input->text().isEmpty())
     {
+        qDebug() << "Input has text";
         // if input is not empty, put that value in the stack first
         QString inputValue = ui->Input->text();
+        ui->Input->clear();
+        ShiftUp();
+        stack[0] = inputValue.toDouble();
         // then act on the bottom two stack elements
     }
     // if input is empty, just act on the bottom two stack elements
-    if(buttonValue == "Plus"){
+    if(buttonValue == "+"){
+        qDebug() << "MathButtonPressed = Add";
         result = stack[0] + stack[1];
-    } else if(buttonValue == "Subtract"){
+    } else if(buttonValue == "-"){
         result = stack[1] - stack[0];
-    } else if(buttonValue == "Divide"){
+    } else if(buttonValue == "/"){
         result = stack[1] / stack[0];
-    } else if(buttonValue == "Multiply"){
+    } else if(buttonValue == "*"){
         result = stack[1] * stack[0];
     } else if(buttonValue == "x^2"){
         result = pow(stack[0],2);
@@ -99,7 +108,7 @@ void Calculator::MathButtonPressed(QAbstractButton *button){
         result = log2(stack[0]);
     }
 
-    ShiftUp();
+    StackOperations(stackOperationsUp);
     stack[0] = result;
     PopulateDisplay();
 }
@@ -107,12 +116,13 @@ void Calculator::MathButtonPressed(QAbstractButton *button){
 // This function handles the RollUp, RollDn, Swap, and Drop buttons
 void Calculator::StackButtonPressed(QAbstractButton *button){
     QString buttonValue = button->text();
+
     double temp;
-    if(buttonValue == "UP"){ // roll up
+    if(buttonValue == "Up"){ // roll up
         temp = stack[stack.size()];
-        ShiftUp();
+        StackOperations(stackOperationsUp);
         stack[0] = temp;
-    } else if(buttonValue == "Down"){ // roll dn
+    } else if(buttonValue == "lDn"){ // roll dn
         temp = stack[0];
         ShiftDown();
         stack[stack.size()] = temp;
@@ -123,7 +133,7 @@ void Calculator::StackButtonPressed(QAbstractButton *button){
         PopulateDisplay();
     } else if(buttonValue == "CLA"){  // clear all
         for(int i = 0; i <= stack.size(); i++){
-            stack[i] = 0;
+            stack[i] = 0.0;
         }
         ui->Display->clear();
     }
@@ -132,16 +142,20 @@ void Calculator::StackButtonPressed(QAbstractButton *button){
 
 // This function is responsible only for the ENTER button
 void Calculator::EnterPressed(){
-
-    double input = 0.0; // create a variable to temporarily store input from lineEdit
-
-    QString inputValue = ui->Input->text(); // take input from the lineEdit
-    ui->Input->clear();                     // clear text from input lineEdit
-
-    int operation = 1;
-    StackOperations(operation); // shift all elements in the stack up one
-    stack[0] = (double)input;   // store input in Stack[0]
+    if(!ui->Input->text().isEmpty()){
+        QString inputValue = ui->Input->text(); // take input from the lineEdit
+        ui->Input->clear();                     // clear text from input lineEdit
+        StackOperations(stackOperationsUp); // shift all elements in the stack up one
+        stack[0] = inputValue.toDouble();   // store input in Stack[0]
+    }
+    else {
+        ShiftUp();
+        stack[0] = stack[1];
+    }
     PopulateDisplay();
+
+    // -- debug code --
+    //qDebug()<<stack[0];
 }
 
 // -- END SLOT (Button Functions) ---------------------------------------------------------------------------
@@ -191,25 +205,20 @@ void Calculator::StackOperations(int operation){
 }
 
 void Calculator::ShiftUp(){
-    // check that the last element of the array has a zero in it
-    if(stack[stack.size()] == 0.0)
+
+    for(int i = stack.size(); i >= 0; i--)
     {
-        for(int i = stack.size(); i >= 0; i--)
-        {
-            stack[i] = stack[i - 1];
-        }
+        stack[i + 1] = stack[i];
     }
-    else // do i even need this????
-    {
-        return;
-    }
+    PopulateDisplay();
 }
 
 void Calculator::ShiftDown(){
-    for(int i = 0; i > (int)stack.size(); i++)
+    for(int i = 0; i < (int)stack.size(); i++)
     {
         stack[i] = stack[i + 1];
     }
+    PopulateDisplay();
 }
 
 void Calculator::Swap(){
@@ -222,13 +231,18 @@ void Calculator::Swap(){
 // -- End Stack Operations -----------------------------------------------------------------------------------
 
 void Calculator::PopulateDisplay(){
-    //ui->Display->clear();
-    ui->Display->addItem(QString::number(stack[0]));
+    ui->Display->clear();
+    //ui->Display->addItem(QString::number(stack[0])); // convert stack[0] from nummber to QString, then add it to the Display
 
-//    for(int i = 0; i < (int)stack.size(); i++)
-//    {
-//        ui->Display->addItem(QString::number(stack[i]));
-//    }
+    for(int i = 0; i < (int)stack.size(); i++)
+    {
+        if(stack[i] != 0.0){
+            //update that element
+            ui->Display->addItem(QString::number(i) + " :   " + QString::number(stack[i]));
+        } else { // if stack[i] = 0
+            break; // break out of forloop
+        }
+    }
 }
 
 void Calculator::keyPressEvent(QKeyEvent *event){
@@ -269,16 +283,16 @@ void Calculator::keyPressEvent(QKeyEvent *event){
             break;
     // Math Functions
         case Qt::Key_Slash:
-            // call divide
+            MathButtonPressed(ui->Divide);
             break;
         case Qt::Key_Asterisk:
-            // call multiply
+            MathButtonPressed(ui->Multiply);
             break;
         case Qt::Key_Minus:
-            // call subtract
+            MathButtonPressed(ui->Subtract);
             break;
         case Qt::Key_Plus:
-            // Make addition happen
+            MathButtonPressed(ui->Add);
             break;
     // Stack Functions
         case Qt::Key_Backspace:
@@ -289,13 +303,18 @@ void Calculator::keyPressEvent(QKeyEvent *event){
         case Qt::Key_Delete:
             // if there's text in the input, remove all
             // if there's no text in the input, drop the lowest item in the stack
-            StackButtonPressed(ui->ClearAll);
+            //StackButtonPressed(ui->ClearAll);
+            StackButtonPressed(ui->Drop);
             break;
         case Qt::Key_Up:
-            ShiftUp();
+            //ShiftUp();
+            //StackOperations(1);
+            StackButtonPressed(ui->RollUp);
             break;
         case Qt::Key_Down:
-            ShiftDown();
+            //ShiftDown();
+            //StackOperations(2);
+            StackButtonPressed(ui->RollDn);
             break;
         case Qt::Key_Left:
             Swap();
