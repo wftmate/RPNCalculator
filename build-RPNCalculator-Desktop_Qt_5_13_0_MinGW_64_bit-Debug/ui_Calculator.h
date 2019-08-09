@@ -13,14 +13,12 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QGridLayout>
-#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QTableView>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
@@ -62,7 +60,6 @@ public:
     QPushButton *RollUp;
     QPushButton *DecimalPoint;
     QPushButton *SquareRoot;
-    QTableView *tableView;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -104,7 +101,7 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(LogBase10, 5, 2, 1, 1);
+        gridLayout->addWidget(LogBase10, 4, 2, 1, 1);
 
         Button3 = new QPushButton(centralWidget);
         numberGroup = new QButtonGroup(Calculator);
@@ -113,7 +110,7 @@ public:
         Button3->setObjectName(QString::fromUtf8("Button3"));
         sizePolicy.setHeightForWidth(Button3->sizePolicy().hasHeightForWidth());
         Button3->setSizePolicy(sizePolicy);
-        Button3->setFocusPolicy(Qt::StrongFocus);
+        Button3->setFocusPolicy(Qt::ClickFocus);
         Button3->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
 "	border: 1px solid gray;\n"
@@ -126,7 +123,7 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(Button3, 10, 2, 1, 1);
+        gridLayout->addWidget(Button3, 9, 2, 1, 1);
 
         Add = new QPushButton(centralWidget);
         mathFunctionGroup->addButton(Add);
@@ -146,14 +143,14 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(Add, 12, 3, 1, 1);
+        gridLayout->addWidget(Add, 11, 3, 1, 1);
 
         Button7 = new QPushButton(centralWidget);
         numberGroup->addButton(Button7);
         Button7->setObjectName(QString::fromUtf8("Button7"));
         sizePolicy.setHeightForWidth(Button7->sizePolicy().hasHeightForWidth());
         Button7->setSizePolicy(sizePolicy);
-        Button7->setFocusPolicy(Qt::StrongFocus);
+        Button7->setFocusPolicy(Qt::ClickFocus);
         Button7->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
 "	border: 1px solid gray;\n"
@@ -166,7 +163,7 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(Button7, 6, 0, 1, 1);
+        gridLayout->addWidget(Button7, 5, 0, 1, 1);
 
         Enter = new QPushButton(centralWidget);
         stackFunctionGroup = new QButtonGroup(Calculator);
@@ -188,14 +185,14 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(Enter, 4, 4, 9, 1);
+        gridLayout->addWidget(Enter, 3, 4, 9, 1);
 
         Button6 = new QPushButton(centralWidget);
         numberGroup->addButton(Button6);
         Button6->setObjectName(QString::fromUtf8("Button6"));
         sizePolicy.setHeightForWidth(Button6->sizePolicy().hasHeightForWidth());
         Button6->setSizePolicy(sizePolicy);
-        Button6->setFocusPolicy(Qt::StrongFocus);
+        Button6->setFocusPolicy(Qt::ClickFocus);
         Button6->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
 "	border: 1px solid gray;\n"
@@ -208,14 +205,14 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(Button6, 8, 2, 1, 1);
+        gridLayout->addWidget(Button6, 7, 2, 1, 1);
 
         Button9 = new QPushButton(centralWidget);
         numberGroup->addButton(Button9);
         Button9->setObjectName(QString::fromUtf8("Button9"));
         sizePolicy.setHeightForWidth(Button9->sizePolicy().hasHeightForWidth());
         Button9->setSizePolicy(sizePolicy);
-        Button9->setFocusPolicy(Qt::StrongFocus);
+        Button9->setFocusPolicy(Qt::ClickFocus);
         Button9->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
 "	border: 1px solid gray;\n"
@@ -228,7 +225,7 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(Button9, 6, 2, 1, 1);
+        gridLayout->addWidget(Button9, 5, 2, 1, 1);
 
         Input = new QLabel(centralWidget);
         Input->setObjectName(QString::fromUtf8("Input"));
@@ -243,7 +240,7 @@ public:
         Input->setMargin(2);
         Input->setIndent(5);
 
-        gridLayout->addWidget(Input, 2, 0, 1, 5);
+        gridLayout->addWidget(Input, 1, 0, 1, 5);
 
         RollDn = new QPushButton(centralWidget);
         stackFunctionGroup->addButton(RollDn);
@@ -263,7 +260,7 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(RollDn, 3, 1, 1, 1);
+        gridLayout->addWidget(RollDn, 2, 1, 1, 1);
 
         NaturalLog = new QPushButton(centralWidget);
         mathFunctionGroup->addButton(NaturalLog);
@@ -283,7 +280,7 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(NaturalLog, 5, 1, 1, 1);
+        gridLayout->addWidget(NaturalLog, 4, 1, 1, 1);
 
         Swap = new QPushButton(centralWidget);
         stackFunctionGroup->addButton(Swap);
@@ -303,14 +300,14 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(Swap, 3, 2, 1, 1);
+        gridLayout->addWidget(Swap, 2, 2, 1, 1);
 
         Button5 = new QPushButton(centralWidget);
         numberGroup->addButton(Button5);
         Button5->setObjectName(QString::fromUtf8("Button5"));
         sizePolicy.setHeightForWidth(Button5->sizePolicy().hasHeightForWidth());
         Button5->setSizePolicy(sizePolicy);
-        Button5->setFocusPolicy(Qt::StrongFocus);
+        Button5->setFocusPolicy(Qt::ClickFocus);
         Button5->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
 "	border: 1px solid gray;\n"
@@ -323,7 +320,7 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(Button5, 8, 1, 1, 1);
+        gridLayout->addWidget(Button5, 7, 1, 1, 1);
 
         YtoX = new QPushButton(centralWidget);
         mathFunctionGroup->addButton(YtoX);
@@ -343,7 +340,7 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(YtoX, 4, 2, 1, 1);
+        gridLayout->addWidget(YtoX, 3, 2, 1, 1);
 
         Subtract = new QPushButton(centralWidget);
         mathFunctionGroup->addButton(Subtract);
@@ -363,7 +360,7 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(Subtract, 10, 3, 1, 1);
+        gridLayout->addWidget(Subtract, 9, 3, 1, 1);
 
         Display = new QListWidget(centralWidget);
         Display->setObjectName(QString::fromUtf8("Display"));
@@ -371,14 +368,14 @@ public:
         Display->setAlternatingRowColors(true);
         Display->setItemAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignRight|Qt::AlignTrailing);
 
-        gridLayout->addWidget(Display, 1, 0, 1, 5);
+        gridLayout->addWidget(Display, 0, 0, 1, 5);
 
         Button4 = new QPushButton(centralWidget);
         numberGroup->addButton(Button4);
         Button4->setObjectName(QString::fromUtf8("Button4"));
         sizePolicy.setHeightForWidth(Button4->sizePolicy().hasHeightForWidth());
         Button4->setSizePolicy(sizePolicy);
-        Button4->setFocusPolicy(Qt::StrongFocus);
+        Button4->setFocusPolicy(Qt::ClickFocus);
         Button4->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
 "	border: 1px solid gray;\n"
@@ -391,7 +388,7 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(Button4, 8, 0, 1, 1);
+        gridLayout->addWidget(Button4, 7, 0, 1, 1);
 
         Inverse = new QPushButton(centralWidget);
         mathFunctionGroup->addButton(Inverse);
@@ -411,14 +408,14 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(Inverse, 4, 3, 1, 1);
+        gridLayout->addWidget(Inverse, 3, 3, 1, 1);
 
         Button8 = new QPushButton(centralWidget);
         numberGroup->addButton(Button8);
         Button8->setObjectName(QString::fromUtf8("Button8"));
         sizePolicy.setHeightForWidth(Button8->sizePolicy().hasHeightForWidth());
         Button8->setSizePolicy(sizePolicy);
-        Button8->setFocusPolicy(Qt::StrongFocus);
+        Button8->setFocusPolicy(Qt::ClickFocus);
         Button8->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
 "	border: 1px solid gray;\n"
@@ -431,7 +428,7 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(Button8, 6, 1, 1, 1);
+        gridLayout->addWidget(Button8, 5, 1, 1, 1);
 
         Square = new QPushButton(centralWidget);
         mathFunctionGroup->addButton(Square);
@@ -451,7 +448,7 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(Square, 4, 0, 1, 1);
+        gridLayout->addWidget(Square, 3, 0, 1, 1);
 
         Divide = new QPushButton(centralWidget);
         mathFunctionGroup->addButton(Divide);
@@ -471,7 +468,7 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(Divide, 6, 3, 1, 1);
+        gridLayout->addWidget(Divide, 5, 3, 1, 1);
 
         Multiply = new QPushButton(centralWidget);
         mathFunctionGroup->addButton(Multiply);
@@ -491,14 +488,14 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(Multiply, 8, 3, 1, 1);
+        gridLayout->addWidget(Multiply, 7, 3, 1, 1);
 
         Button2 = new QPushButton(centralWidget);
         numberGroup->addButton(Button2);
         Button2->setObjectName(QString::fromUtf8("Button2"));
         sizePolicy.setHeightForWidth(Button2->sizePolicy().hasHeightForWidth());
         Button2->setSizePolicy(sizePolicy);
-        Button2->setFocusPolicy(Qt::StrongFocus);
+        Button2->setFocusPolicy(Qt::ClickFocus);
         Button2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
 "	border: 1px solid gray;\n"
@@ -511,14 +508,14 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(Button2, 10, 1, 1, 1);
+        gridLayout->addWidget(Button2, 9, 1, 1, 1);
 
         Button1 = new QPushButton(centralWidget);
         numberGroup->addButton(Button1);
         Button1->setObjectName(QString::fromUtf8("Button1"));
         sizePolicy.setHeightForWidth(Button1->sizePolicy().hasHeightForWidth());
         Button1->setSizePolicy(sizePolicy);
-        Button1->setFocusPolicy(Qt::StrongFocus);
+        Button1->setFocusPolicy(Qt::ClickFocus);
         Button1->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
 "	border: 1px solid gray;\n"
@@ -531,7 +528,7 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(Button1, 10, 0, 1, 1);
+        gridLayout->addWidget(Button1, 9, 0, 1, 1);
 
         LogBase2 = new QPushButton(centralWidget);
         mathFunctionGroup->addButton(LogBase2);
@@ -551,7 +548,7 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(LogBase2, 5, 3, 1, 1);
+        gridLayout->addWidget(LogBase2, 4, 3, 1, 1);
 
         ClearAll = new QPushButton(centralWidget);
         stackFunctionGroup->addButton(ClearAll);
@@ -571,7 +568,7 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(ClearAll, 3, 4, 1, 1);
+        gridLayout->addWidget(ClearAll, 2, 4, 1, 1);
 
         ChangeSign = new QPushButton(centralWidget);
         mathFunctionGroup->addButton(ChangeSign);
@@ -591,7 +588,7 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(ChangeSign, 5, 0, 1, 1);
+        gridLayout->addWidget(ChangeSign, 4, 0, 1, 1);
 
         Drop = new QPushButton(centralWidget);
         stackFunctionGroup->addButton(Drop);
@@ -609,14 +606,14 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(Drop, 3, 3, 1, 1);
+        gridLayout->addWidget(Drop, 2, 3, 1, 1);
 
         Button0 = new QPushButton(centralWidget);
         numberGroup->addButton(Button0);
         Button0->setObjectName(QString::fromUtf8("Button0"));
         sizePolicy.setHeightForWidth(Button0->sizePolicy().hasHeightForWidth());
         Button0->setSizePolicy(sizePolicy);
-        Button0->setFocusPolicy(Qt::StrongFocus);
+        Button0->setFocusPolicy(Qt::ClickFocus);
         Button0->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
 "	border: 1px solid gray;\n"
@@ -629,7 +626,7 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(Button0, 12, 0, 1, 2);
+        gridLayout->addWidget(Button0, 11, 0, 1, 2);
 
         RollUp = new QPushButton(centralWidget);
         stackFunctionGroup->addButton(RollUp);
@@ -649,14 +646,14 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(RollUp, 3, 0, 1, 1);
+        gridLayout->addWidget(RollUp, 2, 0, 1, 1);
 
         DecimalPoint = new QPushButton(centralWidget);
         numberGroup->addButton(DecimalPoint);
         DecimalPoint->setObjectName(QString::fromUtf8("DecimalPoint"));
         sizePolicy.setHeightForWidth(DecimalPoint->sizePolicy().hasHeightForWidth());
         DecimalPoint->setSizePolicy(sizePolicy);
-        DecimalPoint->setFocusPolicy(Qt::StrongFocus);
+        DecimalPoint->setFocusPolicy(Qt::ClickFocus);
         DecimalPoint->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
 "	border: 1px solid gray;\n"
@@ -669,7 +666,7 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(DecimalPoint, 12, 2, 1, 1);
+        gridLayout->addWidget(DecimalPoint, 11, 2, 1, 1);
 
         SquareRoot = new QPushButton(centralWidget);
         mathFunctionGroup->addButton(SquareRoot);
@@ -689,12 +686,7 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(SquareRoot, 4, 1, 1, 1);
-
-        tableView = new QTableView(centralWidget);
-        tableView->setObjectName(QString::fromUtf8("tableView"));
-
-        gridLayout->addWidget(tableView, 0, 0, 1, 5);
+        gridLayout->addWidget(SquareRoot, 3, 1, 1, 1);
 
         Calculator->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(Calculator);

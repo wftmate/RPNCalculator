@@ -13,8 +13,9 @@
 
 // initialize an array called "stack" of type double and some size
 std::array<double, 10> stack; // equivalent to: :double stack[10];"
-int stackOperationsUp = 1;
-int stackOperationsDn = 2;
+const int shiftUp = 1;
+const int shiftDn = 2;
+const int Swap    = 3;
 
 Calculator::Calculator(QWidget *parent) :
     QMainWindow(parent),
@@ -23,7 +24,6 @@ Calculator::Calculator(QWidget *parent) :
     ui->setupUi(this);
 
     connect(ui->Enter, SIGNAL(pressed()), this, SLOT(EnterPressed()));
-    connect(ui->RollUp, SIGNAL(pressed()), this, SLOT(ShiftUp()));
 
     // Connect all buttons on widget to functions
     // Connect Stack Functions
@@ -79,7 +79,7 @@ void Calculator::MathButtonPressed(QAbstractButton *button){
         // if input is not empty, put that value in the stack first
         QString inputValue = ui->Input->text();
         ui->Input->clear();
-        ShiftUp();
+        StackOperations(shiftUp);
         stack[0] = inputValue.toDouble();
         // then act on the bottom two stack elements
     }
@@ -111,29 +111,29 @@ void Calculator::MathButtonPressed(QAbstractButton *button){
         result = log2(stack[0]);
     }
 
-    StackOperations(stackOperationsDn);
+    StackOperations(shiftDn);
     stack[0] = result;
     PopulateDisplay();
 }
 
-// This function handles the RollUp, RollDn, Swap, and Drop buttons
+// This function handles the shiftUp, shiftDn, Swap, and Drop buttons
 void Calculator::StackButtonPressed(QAbstractButton *button){
     QString buttonValue = button->text();
 
     double temp;
     if(buttonValue == "Up"){ // roll up
+        qDebug()<<"StackButtonPressed = RollUp";
         temp = stack[stack.size()];
-        StackOperations(stackOperationsUp);
+        StackOperations(shiftUp);
         stack[0] = temp;
-    } else if(buttonValue == "lDn"){ // roll dn
+    } else if(buttonValue == "Dn"){ // roll down
         temp = stack[0];
-        ShiftDown();
-        stack[stack.size()] = temp;
+        StackOperations(shiftDn);
+        stack[stack.size() + 1] = temp;
     } else if(buttonValue == "Swap"){ // swap
-        Swap();
+        StackOperations(Swap);
     } else if(buttonValue == "Drop"){ // drop
-        ShiftDown();
-        PopulateDisplay();
+        StackOperations(shiftDn);
     } else if(buttonValue == "CLA"){  // clear all
         for(int i = 0; i <= stack.size(); i++){
             stack[i] = 0.0;
@@ -148,11 +148,11 @@ void Calculator::EnterPressed(){
     if(!ui->Input->text().isEmpty()){
         QString inputValue = ui->Input->text(); // take input from the lineEdit
         ui->Input->clear();                     // clear text from input lineEdit
-        StackOperations(stackOperationsUp); // shift all elements in the stack up one
+        StackOperations(shiftUp); // shift all elements in the stack up one
         stack[0] = inputValue.toDouble();   // store input in Stack[0]
     }
     else {
-        ShiftUp();
+        StackOperations(shiftUp);
         stack[0] = stack[1];
     }
     PopulateDisplay();
@@ -188,50 +188,33 @@ bool Calculator::InputHasText(){
     }
 }
 
-//-- Start Stack Operations ----------------------------------------------------------------------------------
-
 void Calculator::StackOperations(int operation){
     switch(operation)
     {
         // shift up
-        case 1: ShiftUp();// shift all elements up one;
-                break;
+        case 1: // shift all elements up one;
+            qDebug()<<"StackOperations = shiftUp";
+            for(int i = stack.size(); i >= 0; i--)
+                stack[i + 1] = stack[i];
+            break;
         // shift down
-        case 2: ShiftDown();// shift all elements down one;
-                break;
+        case 2: // shift all elements down one;
+            for(int i = 0; i < (int)stack.size(); i++)
+            {
+                stack[i] = stack[i + 1];
+            }
+            break;
         // swap
-        case 3: Swap();// swap the two lowest elements in the stack;
-                break;
+        case 3: // swap the two lowest elements in the stack;
+            double temp;
+            temp = stack[0];
+            stack[0] = stack[1];
+            stack[1] = temp;
+            break;
         default: // some default action;
-                 break;
+            break;
     }
 }
-
-void Calculator::ShiftUp(){
-
-    for(int i = stack.size(); i >= 0; i--)
-    {
-        stack[i + 1] = stack[i];
-    }
-    PopulateDisplay();
-}
-
-void Calculator::ShiftDown(){
-    for(int i = 0; i < (int)stack.size(); i++)
-    {
-        stack[i] = stack[i + 1];
-    }
-    PopulateDisplay();
-}
-
-void Calculator::Swap(){
-    double temp;
-    temp = stack[0];
-    stack[0] = stack[1];
-    stack[1] = temp;
-}
-
-// -- End Stack Operations -----------------------------------------------------------------------------------
 
 void Calculator::PopulateDisplay(){
     ui->Display->clear();
@@ -242,8 +225,8 @@ void Calculator::PopulateDisplay(){
     {
         if(stack[i] != 0.0){
             //update that element
-            ui->Display->addItem("Stack = " + QString::number(i) + " : " + "Value = " + QString::number(stack[i]));
-            ui->tableView->setItem
+            ui->Display->addItem(QString::number(i) + " : " + QString::number(stack[i]));
+            //ui->tableView->setItem
         } else { // if stack[i] = 0
             break; // break out of forloop
         }
@@ -322,10 +305,10 @@ void Calculator::keyPressEvent(QKeyEvent *event){
             StackButtonPressed(ui->RollDn);
             break;
         case Qt::Key_Left:
-            Swap();
+            StackButtonPressed(ui->Swap);
             break;
         case Qt::Key_Right:
-            Swap();
+            StackButtonPressed(ui->Swap);
             break;
         case Qt::Key_Return:
             EnterPressed();

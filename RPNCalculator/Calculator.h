@@ -28,12 +28,7 @@ private slots:
 
 protected:
     void keyPressEvent(QKeyEvent *event);
-
     void StackOperations(int);
-    void ShiftUp();
-    void ShiftDown();
-    void Swap();
-
     void PopulateDisplay();
     bool InputHasText();
     void BackspacePressed();
