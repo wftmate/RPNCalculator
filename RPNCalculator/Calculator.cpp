@@ -14,6 +14,7 @@
 // initialize an array called "stack" of type double and some size
 std::array<double, 10> stack; // equivalent to: :double stack[10];"
 int stackOperationsUp = 1;
+int stackOperationsDn = 2;
 
 Calculator::Calculator(QWidget *parent) :
     QMainWindow(parent),
@@ -31,6 +32,8 @@ Calculator::Calculator(QWidget *parent) :
     ui->mathFunctionGroup->connect(ui->mathFunctionGroup, SIGNAL(buttonClicked(QAbstractButton*)), this, SLOT(MathButtonPressed(QAbstractButton*)));
     // Connect Number Buttons
     ui->numberGroup->connect(ui->numberGroup, SIGNAL(buttonClicked(QAbstractButton*)), this, SLOT(NumPressed(QAbstractButton*)));
+
+    ui->Input->setText("0");
 }
 
 //Destructor
@@ -108,7 +111,7 @@ void Calculator::MathButtonPressed(QAbstractButton *button){
         result = log2(stack[0]);
     }
 
-    StackOperations(stackOperationsUp);
+    StackOperations(stackOperationsDn);
     stack[0] = result;
     PopulateDisplay();
 }
@@ -235,10 +238,12 @@ void Calculator::PopulateDisplay(){
     //ui->Display->addItem(QString::number(stack[0])); // convert stack[0] from nummber to QString, then add it to the Display
 
     for(int i = 0; i < (int)stack.size(); i++)
+    //for(int i = stack.size(); i >= 0; i--)
     {
         if(stack[i] != 0.0){
             //update that element
-            ui->Display->addItem(QString::number(i) + " :   " + QString::number(stack[i]));
+            ui->Display->addItem("Stack = " + QString::number(i) + " : " + "Value = " + QString::number(stack[i]));
+            ui->tableView->setItem
         } else { // if stack[i] = 0
             break; // break out of forloop
         }

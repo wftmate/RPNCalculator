@@ -13,12 +13,14 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
@@ -60,7 +62,7 @@ public:
     QPushButton *RollUp;
     QPushButton *DecimalPoint;
     QPushButton *SquareRoot;
-    QLabel *label;
+    QTableView *tableView;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -89,6 +91,7 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(LogBase10->sizePolicy().hasHeightForWidth());
         LogBase10->setSizePolicy(sizePolicy);
+        LogBase10->setFocusPolicy(Qt::NoFocus);
         LogBase10->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: olive;\n"
 "	border: 1px solid gray;\n"
@@ -110,6 +113,7 @@ public:
         Button3->setObjectName(QString::fromUtf8("Button3"));
         sizePolicy.setHeightForWidth(Button3->sizePolicy().hasHeightForWidth());
         Button3->setSizePolicy(sizePolicy);
+        Button3->setFocusPolicy(Qt::StrongFocus);
         Button3->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
 "	border: 1px solid gray;\n"
@@ -129,6 +133,7 @@ public:
         Add->setObjectName(QString::fromUtf8("Add"));
         sizePolicy.setHeightForWidth(Add->sizePolicy().hasHeightForWidth());
         Add->setSizePolicy(sizePolicy);
+        Add->setFocusPolicy(Qt::NoFocus);
         Add->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: olive;\n"
 "	border: 1px solid gray;\n"
@@ -148,6 +153,7 @@ public:
         Button7->setObjectName(QString::fromUtf8("Button7"));
         sizePolicy.setHeightForWidth(Button7->sizePolicy().hasHeightForWidth());
         Button7->setSizePolicy(sizePolicy);
+        Button7->setFocusPolicy(Qt::StrongFocus);
         Button7->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
 "	border: 1px solid gray;\n"
@@ -169,6 +175,7 @@ public:
         Enter->setObjectName(QString::fromUtf8("Enter"));
         sizePolicy.setHeightForWidth(Enter->sizePolicy().hasHeightForWidth());
         Enter->setSizePolicy(sizePolicy);
+        Enter->setFocusPolicy(Qt::NoFocus);
         Enter->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #FFA500;\n"
 "	border: 1px solid gray;\n"
@@ -188,6 +195,7 @@ public:
         Button6->setObjectName(QString::fromUtf8("Button6"));
         sizePolicy.setHeightForWidth(Button6->sizePolicy().hasHeightForWidth());
         Button6->setSizePolicy(sizePolicy);
+        Button6->setFocusPolicy(Qt::StrongFocus);
         Button6->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
 "	border: 1px solid gray;\n"
@@ -207,6 +215,7 @@ public:
         Button9->setObjectName(QString::fromUtf8("Button9"));
         sizePolicy.setHeightForWidth(Button9->sizePolicy().hasHeightForWidth());
         Button9->setSizePolicy(sizePolicy);
+        Button9->setFocusPolicy(Qt::StrongFocus);
         Button9->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
 "	border: 1px solid gray;\n"
@@ -241,6 +250,7 @@ public:
         RollDn->setObjectName(QString::fromUtf8("RollDn"));
         sizePolicy.setHeightForWidth(RollDn->sizePolicy().hasHeightForWidth());
         RollDn->setSizePolicy(sizePolicy);
+        RollDn->setFocusPolicy(Qt::NoFocus);
         RollDn->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #FFA500;\n"
 "	border: 1px solid gray;\n"
@@ -260,6 +270,7 @@ public:
         NaturalLog->setObjectName(QString::fromUtf8("NaturalLog"));
         sizePolicy.setHeightForWidth(NaturalLog->sizePolicy().hasHeightForWidth());
         NaturalLog->setSizePolicy(sizePolicy);
+        NaturalLog->setFocusPolicy(Qt::NoFocus);
         NaturalLog->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: olive;\n"
 "	border: 1px solid gray;\n"
@@ -279,6 +290,7 @@ public:
         Swap->setObjectName(QString::fromUtf8("Swap"));
         sizePolicy.setHeightForWidth(Swap->sizePolicy().hasHeightForWidth());
         Swap->setSizePolicy(sizePolicy);
+        Swap->setFocusPolicy(Qt::NoFocus);
         Swap->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #FFA500;\n"
 "	border: 1px solid gray;\n"
@@ -298,6 +310,7 @@ public:
         Button5->setObjectName(QString::fromUtf8("Button5"));
         sizePolicy.setHeightForWidth(Button5->sizePolicy().hasHeightForWidth());
         Button5->setSizePolicy(sizePolicy);
+        Button5->setFocusPolicy(Qt::StrongFocus);
         Button5->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
 "	border: 1px solid gray;\n"
@@ -317,6 +330,7 @@ public:
         YtoX->setObjectName(QString::fromUtf8("YtoX"));
         sizePolicy.setHeightForWidth(YtoX->sizePolicy().hasHeightForWidth());
         YtoX->setSizePolicy(sizePolicy);
+        YtoX->setFocusPolicy(Qt::NoFocus);
         YtoX->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: olive;\n"
 "	border: 1px solid gray;\n"
@@ -336,6 +350,7 @@ public:
         Subtract->setObjectName(QString::fromUtf8("Subtract"));
         sizePolicy.setHeightForWidth(Subtract->sizePolicy().hasHeightForWidth());
         Subtract->setSizePolicy(sizePolicy);
+        Subtract->setFocusPolicy(Qt::NoFocus);
         Subtract->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: olive;\n"
 "	border: 1px solid gray;\n"
@@ -363,6 +378,7 @@ public:
         Button4->setObjectName(QString::fromUtf8("Button4"));
         sizePolicy.setHeightForWidth(Button4->sizePolicy().hasHeightForWidth());
         Button4->setSizePolicy(sizePolicy);
+        Button4->setFocusPolicy(Qt::StrongFocus);
         Button4->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
 "	border: 1px solid gray;\n"
@@ -382,6 +398,7 @@ public:
         Inverse->setObjectName(QString::fromUtf8("Inverse"));
         sizePolicy.setHeightForWidth(Inverse->sizePolicy().hasHeightForWidth());
         Inverse->setSizePolicy(sizePolicy);
+        Inverse->setFocusPolicy(Qt::NoFocus);
         Inverse->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: olive;\n"
 "	border: 1px solid gray;\n"
@@ -401,6 +418,7 @@ public:
         Button8->setObjectName(QString::fromUtf8("Button8"));
         sizePolicy.setHeightForWidth(Button8->sizePolicy().hasHeightForWidth());
         Button8->setSizePolicy(sizePolicy);
+        Button8->setFocusPolicy(Qt::StrongFocus);
         Button8->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
 "	border: 1px solid gray;\n"
@@ -420,6 +438,7 @@ public:
         Square->setObjectName(QString::fromUtf8("Square"));
         sizePolicy.setHeightForWidth(Square->sizePolicy().hasHeightForWidth());
         Square->setSizePolicy(sizePolicy);
+        Square->setFocusPolicy(Qt::NoFocus);
         Square->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: olive;\n"
 "	border: 1px solid gray;\n"
@@ -439,6 +458,7 @@ public:
         Divide->setObjectName(QString::fromUtf8("Divide"));
         sizePolicy.setHeightForWidth(Divide->sizePolicy().hasHeightForWidth());
         Divide->setSizePolicy(sizePolicy);
+        Divide->setFocusPolicy(Qt::NoFocus);
         Divide->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: olive;\n"
 "	border: 1px solid gray;\n"
@@ -458,6 +478,7 @@ public:
         Multiply->setObjectName(QString::fromUtf8("Multiply"));
         sizePolicy.setHeightForWidth(Multiply->sizePolicy().hasHeightForWidth());
         Multiply->setSizePolicy(sizePolicy);
+        Multiply->setFocusPolicy(Qt::NoFocus);
         Multiply->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: olive;\n"
 "	border: 1px solid gray;\n"
@@ -477,6 +498,7 @@ public:
         Button2->setObjectName(QString::fromUtf8("Button2"));
         sizePolicy.setHeightForWidth(Button2->sizePolicy().hasHeightForWidth());
         Button2->setSizePolicy(sizePolicy);
+        Button2->setFocusPolicy(Qt::StrongFocus);
         Button2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
 "	border: 1px solid gray;\n"
@@ -496,6 +518,7 @@ public:
         Button1->setObjectName(QString::fromUtf8("Button1"));
         sizePolicy.setHeightForWidth(Button1->sizePolicy().hasHeightForWidth());
         Button1->setSizePolicy(sizePolicy);
+        Button1->setFocusPolicy(Qt::StrongFocus);
         Button1->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
 "	border: 1px solid gray;\n"
@@ -515,6 +538,7 @@ public:
         LogBase2->setObjectName(QString::fromUtf8("LogBase2"));
         sizePolicy.setHeightForWidth(LogBase2->sizePolicy().hasHeightForWidth());
         LogBase2->setSizePolicy(sizePolicy);
+        LogBase2->setFocusPolicy(Qt::NoFocus);
         LogBase2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: olive;\n"
 "	border: 1px solid gray;\n"
@@ -534,6 +558,7 @@ public:
         ClearAll->setObjectName(QString::fromUtf8("ClearAll"));
         sizePolicy.setHeightForWidth(ClearAll->sizePolicy().hasHeightForWidth());
         ClearAll->setSizePolicy(sizePolicy);
+        ClearAll->setFocusPolicy(Qt::NoFocus);
         ClearAll->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #FFA500;\n"
 "	border: 1px solid gray;\n"
@@ -553,6 +578,7 @@ public:
         ChangeSign->setObjectName(QString::fromUtf8("ChangeSign"));
         sizePolicy.setHeightForWidth(ChangeSign->sizePolicy().hasHeightForWidth());
         ChangeSign->setSizePolicy(sizePolicy);
+        ChangeSign->setFocusPolicy(Qt::NoFocus);
         ChangeSign->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: olive;\n"
 "	border: 1px solid gray;\n"
@@ -570,6 +596,7 @@ public:
         Drop = new QPushButton(centralWidget);
         stackFunctionGroup->addButton(Drop);
         Drop->setObjectName(QString::fromUtf8("Drop"));
+        Drop->setFocusPolicy(Qt::NoFocus);
         Drop->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #FFA500;\n"
 "	border: 1px solid gray;\n"
@@ -589,6 +616,7 @@ public:
         Button0->setObjectName(QString::fromUtf8("Button0"));
         sizePolicy.setHeightForWidth(Button0->sizePolicy().hasHeightForWidth());
         Button0->setSizePolicy(sizePolicy);
+        Button0->setFocusPolicy(Qt::StrongFocus);
         Button0->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
 "	border: 1px solid gray;\n"
@@ -608,6 +636,7 @@ public:
         RollUp->setObjectName(QString::fromUtf8("RollUp"));
         sizePolicy.setHeightForWidth(RollUp->sizePolicy().hasHeightForWidth());
         RollUp->setSizePolicy(sizePolicy);
+        RollUp->setFocusPolicy(Qt::NoFocus);
         RollUp->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #FFA500;\n"
 "	border: 1px solid gray;\n"
@@ -627,6 +656,7 @@ public:
         DecimalPoint->setObjectName(QString::fromUtf8("DecimalPoint"));
         sizePolicy.setHeightForWidth(DecimalPoint->sizePolicy().hasHeightForWidth());
         DecimalPoint->setSizePolicy(sizePolicy);
+        DecimalPoint->setFocusPolicy(Qt::StrongFocus);
         DecimalPoint->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
 "	border: 1px solid gray;\n"
@@ -646,6 +676,7 @@ public:
         SquareRoot->setObjectName(QString::fromUtf8("SquareRoot"));
         sizePolicy.setHeightForWidth(SquareRoot->sizePolicy().hasHeightForWidth());
         SquareRoot->setSizePolicy(sizePolicy);
+        SquareRoot->setFocusPolicy(Qt::NoFocus);
         SquareRoot->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: olive;\n"
 "	border: 1px solid gray;\n"
@@ -660,13 +691,10 @@ public:
 
         gridLayout->addWidget(SquareRoot, 4, 1, 1, 1);
 
-        label = new QLabel(centralWidget);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setFont(font);
-        label->setStyleSheet(QString::fromUtf8("background-color: #fff;"));
-        label->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
+        tableView = new QTableView(centralWidget);
+        tableView->setObjectName(QString::fromUtf8("tableView"));
 
-        gridLayout->addWidget(label, 0, 0, 1, 5);
+        gridLayout->addWidget(tableView, 0, 0, 1, 5);
 
         Calculator->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(Calculator);
@@ -718,7 +746,6 @@ public:
         RollUp->setText(QCoreApplication::translate("Calculator", "Up", nullptr));
         DecimalPoint->setText(QCoreApplication::translate("Calculator", ".", nullptr));
         SquareRoot->setText(QCoreApplication::translate("Calculator", "sqrt", nullptr));
-        label->setText(QCoreApplication::translate("Calculator", "TextLabel", nullptr));
     } // retranslateUi
 
 };
