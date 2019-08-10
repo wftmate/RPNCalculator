@@ -2,6 +2,7 @@
 #include "ui_Calculator.h"
 
 #include <array>
+#include <vector>
 #include <iostream>
 
 //#include <QtWidgets>
@@ -12,7 +13,11 @@
 //double stackValue = 0.0;
 
 // initialize an array called "stack" of type double and some size
-std::array<double, 10> stack; // equivalent to: :double stack[10];"
+const int stackSize = 10;
+//std::array<double, stackSize> stack; // equivalent to: :double stack[10];"
+
+std::vector<double> stack;
+
 const int shiftUp = 1;
 const int shiftDn = 2;
 const int Swap    = 3;
@@ -148,8 +153,10 @@ void Calculator::EnterPressed(){
     if(!ui->Input->text().isEmpty()){
         QString inputValue = ui->Input->text(); // take input from the lineEdit
         ui->Input->clear();                     // clear text from input lineEdit
-        StackOperations(shiftUp); // shift all elements in the stack up one
-        stack[0] = inputValue.toDouble();   // store input in Stack[0]
+        //StackOperations(shiftUp); // shift all elements in the stack up one
+        //stack[0] = inputValue.toDouble();   // store input in Stack[0]
+
+        stack.insert(stack.begin(), inputValue.toDouble());
     }
     else {
         StackOperations(shiftUp);

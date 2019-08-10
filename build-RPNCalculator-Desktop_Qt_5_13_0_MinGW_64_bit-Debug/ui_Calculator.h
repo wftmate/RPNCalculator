@@ -64,8 +64,8 @@ public:
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
     QButtonGroup *stackFunctionGroup;
-    QButtonGroup *numberGroup;
     QButtonGroup *mathFunctionGroup;
+    QButtonGroup *numberGroup;
 
     void setupUi(QMainWindow *Calculator)
     {
@@ -90,13 +90,13 @@ public:
         LogBase10->setSizePolicy(sizePolicy);
         LogBase10->setFocusPolicy(Qt::NoFocus);
         LogBase10->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	background-color: olive;\n"
+"	background-color: #1E8449;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
-"	background-color: #FF0000;\n"
+"	background-color: #196F3D;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}"));
@@ -132,13 +132,13 @@ public:
         Add->setSizePolicy(sizePolicy);
         Add->setFocusPolicy(Qt::NoFocus);
         Add->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	background-color: olive;\n"
+"	background-color: #1E8449;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
-"	background-color: #FF0000;\n"
+"	background-color: #196F3D;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}"));
@@ -180,7 +180,7 @@ public:
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
-"	background-color: #FF0000;\n"
+"	background-color: #D68910;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}"));
@@ -255,7 +255,7 @@ public:
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
-"	background-color: #FF0000;\n"
+"	background-color: #D68910;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}"));
@@ -269,13 +269,13 @@ public:
         NaturalLog->setSizePolicy(sizePolicy);
         NaturalLog->setFocusPolicy(Qt::NoFocus);
         NaturalLog->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	background-color: olive;\n"
+"	background-color: #1E8449;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
-"	background-color: #FF0000;\n"
+"	background-color: #196F3D;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}"));
@@ -295,7 +295,7 @@ public:
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
-"	background-color: #FF0000;\n"
+"	background-color: #D68910;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}"));
@@ -329,13 +329,13 @@ public:
         YtoX->setSizePolicy(sizePolicy);
         YtoX->setFocusPolicy(Qt::NoFocus);
         YtoX->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	background-color: olive;\n"
+"	background-color: #1E8449;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
-"	background-color: #FF0000;\n"
+"	background-color: #196F3D;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}"));
@@ -349,13 +349,13 @@ public:
         Subtract->setSizePolicy(sizePolicy);
         Subtract->setFocusPolicy(Qt::NoFocus);
         Subtract->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	background-color: olive;\n"
+"	background-color: #1E8449;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
-"	background-color: #FF0000;\n"
+"	background-color: #196F3D;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}"));
@@ -364,6 +364,7 @@ public:
 
         Display = new QListWidget(centralWidget);
         Display->setObjectName(QString::fromUtf8("Display"));
+        Display->setFocusPolicy(Qt::NoFocus);
         Display->setLayoutDirection(Qt::RightToLeft);
         Display->setAlternatingRowColors(true);
         Display->setItemAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignRight|Qt::AlignTrailing);
@@ -397,13 +398,13 @@ public:
         Inverse->setSizePolicy(sizePolicy);
         Inverse->setFocusPolicy(Qt::NoFocus);
         Inverse->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	background-color: olive;\n"
+"	background-color: #1E8449;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
-"	background-color: #FF0000;\n"
+"	background-color: #196F3D;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}"));
@@ -437,13 +438,13 @@ public:
         Square->setSizePolicy(sizePolicy);
         Square->setFocusPolicy(Qt::NoFocus);
         Square->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	background-color: olive;\n"
+"	background-color: #1E8449;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
-"	background-color: #FF0000;\n"
+"	background-color: #196F3D;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}"));
@@ -457,13 +458,13 @@ public:
         Divide->setSizePolicy(sizePolicy);
         Divide->setFocusPolicy(Qt::NoFocus);
         Divide->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	background-color: olive;\n"
+"	background-color: #1E8449;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
-"	background-color: #FF0000;\n"
+"	background-color: #196F3D;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}"));
@@ -477,13 +478,13 @@ public:
         Multiply->setSizePolicy(sizePolicy);
         Multiply->setFocusPolicy(Qt::NoFocus);
         Multiply->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	background-color: olive;\n"
+"	background-color: #1E8449;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
-"	background-color: #FF0000;\n"
+"	background-color: #196F3D;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}"));
@@ -537,13 +538,13 @@ public:
         LogBase2->setSizePolicy(sizePolicy);
         LogBase2->setFocusPolicy(Qt::NoFocus);
         LogBase2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	background-color: olive;\n"
+"	background-color: #1E8449;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
-"	background-color: #FF0000;\n"
+"	background-color: #196F3D;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}"));
@@ -563,7 +564,7 @@ public:
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
-"	background-color: #FF0000;\n"
+"	background-color: #D68910;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}"));
@@ -577,13 +578,13 @@ public:
         ChangeSign->setSizePolicy(sizePolicy);
         ChangeSign->setFocusPolicy(Qt::NoFocus);
         ChangeSign->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	background-color: olive;\n"
+"	background-color: #1E8449;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
-"	background-color: #FF0000;\n"
+"	background-color: #196F3D;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}"));
@@ -601,7 +602,7 @@ public:
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
-"	background-color: #FF0000;\n"
+"	background-color: #D68910;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}"));
@@ -641,7 +642,7 @@ public:
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
-"	background-color: #FF0000;\n"
+"	background-color: #D68910;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}"));
@@ -675,13 +676,13 @@ public:
         SquareRoot->setSizePolicy(sizePolicy);
         SquareRoot->setFocusPolicy(Qt::NoFocus);
         SquareRoot->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	background-color: olive;\n"
+"	background-color: #1E8449;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
-"	background-color: #FF0000;\n"
+"	background-color: #196F3D;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}"));
