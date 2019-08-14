@@ -57,16 +57,20 @@ void Calculator::NumPressed(QAbstractButton *button){
     //QPushButton *button = (QPushButton *)sender();
     QString buttonValue = button->text();
     QString inputValue = ui->Input->text();
-    if(inputValue.toDouble() == 0 || inputValue.toDouble() == 0.0)
+    if(static_cast<int>(inputValue.toDouble()) == 0 || inputValue.toDouble() == 0.0)
     {
         ui->Input->setText(buttonValue);  // put the button value in the lineEdit
     }
     else
     {
         QString newValue = inputValue + buttonValue;
-        double dblNewValue = newValue.toDouble();
-        ui->Input->setText(QString::number(dblNewValue, 'g', scientificNotation));
+        ui->Input->setText(newValue);
+//        double dblNewValue = newValue.toDouble();
+//        ui->Input->setText(QString::number(dblNewValue, 'g', scientificNotation));
     }
+
+    //QRegExp reg("[-]?[0-9.]*");
+
 }
 
 // This function determines what to do when an operator button is pressed
