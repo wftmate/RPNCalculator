@@ -15,166 +15,6 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="4" column="2">
-     <widget class="QPushButton" name="LogBase10">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::NoFocus</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: #1E8449;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: #196F3D;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>log_10</string>
-      </property>
-      <attribute name="buttonGroup">
-       <string notr="true">mathFunctionGroup</string>
-      </attribute>
-     </widget>
-    </item>
-    <item row="9" column="2">
-     <widget class="QPushButton" name="Button3">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::ClickFocus</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: darkgray;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: Dimgray;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>3</string>
-      </property>
-      <attribute name="buttonGroup">
-       <string notr="true">numberGroup</string>
-      </attribute>
-     </widget>
-    </item>
-    <item row="11" column="3">
-     <widget class="QPushButton" name="Add">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::NoFocus</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: #1E8449;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: #196F3D;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>+</string>
-      </property>
-      <attribute name="buttonGroup">
-       <string notr="true">mathFunctionGroup</string>
-      </attribute>
-     </widget>
-    </item>
-    <item row="5" column="0">
-     <widget class="QPushButton" name="Button7">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::ClickFocus</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: darkgray;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: Dimgray;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>7</string>
-      </property>
-      <attribute name="buttonGroup">
-       <string notr="true">numberGroup</string>
-      </attribute>
-     </widget>
-    </item>
-    <item row="3" column="4" rowspan="9">
-     <widget class="QPushButton" name="Enter">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::NoFocus</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: #FFA500;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: #D68910;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>ENTER</string>
-      </property>
-      <attribute name="buttonGroup">
-       <string notr="true">stackFunctionGroup</string>
-      </attribute>
-     </widget>
-    </item>
     <item row="7" column="2">
      <widget class="QPushButton" name="Button6">
       <property name="sizePolicy">
@@ -207,101 +47,8 @@ QPushButton:pressed {
       </attribute>
      </widget>
     </item>
-    <item row="5" column="2">
-     <widget class="QPushButton" name="Button9">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::ClickFocus</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: darkgray;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: Dimgray;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>9</string>
-      </property>
-      <attribute name="buttonGroup">
-       <string notr="true">numberGroup</string>
-      </attribute>
-     </widget>
-    </item>
-    <item row="1" column="0" colspan="5">
-     <widget class="QLabel" name="Input">
-      <property name="font">
-       <font>
-        <pointsize>16</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: #fff;</string>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-      <property name="scaledContents">
-       <bool>false</bool>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-      </property>
-      <property name="margin">
-       <number>2</number>
-      </property>
-      <property name="indent">
-       <number>5</number>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QPushButton" name="RollDn">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::NoFocus</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: #FFA500;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: #D68910;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>Dn</string>
-      </property>
-      <attribute name="buttonGroup">
-       <string notr="true">stackFunctionGroup</string>
-      </attribute>
-     </widget>
-    </item>
-    <item row="4" column="1">
-     <widget class="QPushButton" name="NaturalLog">
+    <item row="5" column="3">
+     <widget class="QPushButton" name="Divide">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
         <horstretch>0</horstretch>
@@ -325,79 +72,15 @@ QPushButton:pressed {
 }</string>
       </property>
       <property name="text">
-       <string>ln</string>
+       <string>/</string>
       </property>
       <attribute name="buttonGroup">
        <string notr="true">mathFunctionGroup</string>
       </attribute>
      </widget>
     </item>
-    <item row="2" column="2">
-     <widget class="QPushButton" name="Swap">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::NoFocus</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: #FFA500;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: #D68910;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>Swap</string>
-      </property>
-      <attribute name="buttonGroup">
-       <string notr="true">stackFunctionGroup</string>
-      </attribute>
-     </widget>
-    </item>
-    <item row="7" column="1">
-     <widget class="QPushButton" name="Button5">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::ClickFocus</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: darkgray;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: Dimgray;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>5</string>
-      </property>
-      <attribute name="buttonGroup">
-       <string notr="true">numberGroup</string>
-      </attribute>
-     </widget>
-    </item>
-    <item row="3" column="2">
-     <widget class="QPushButton" name="YtoX">
+    <item row="11" column="3">
+     <widget class="QPushButton" name="Add">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
         <horstretch>0</horstretch>
@@ -421,7 +104,7 @@ QPushButton:pressed {
 }</string>
       </property>
       <property name="text">
-       <string>y^x</string>
+       <string>+</string>
       </property>
       <attribute name="buttonGroup">
        <string notr="true">mathFunctionGroup</string>
@@ -460,56 +143,8 @@ QPushButton:pressed {
       </attribute>
      </widget>
     </item>
-    <item row="0" column="0" colspan="5">
-     <widget class="QListWidget" name="Display">
-      <property name="focusPolicy">
-       <enum>Qt::NoFocus</enum>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::RightToLeft</enum>
-      </property>
-      <property name="alternatingRowColors">
-       <bool>true</bool>
-      </property>
-      <property name="itemAlignment">
-       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignRight|Qt::AlignTrailing</set>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="0">
-     <widget class="QPushButton" name="Button4">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::ClickFocus</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: darkgray;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: Dimgray;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>4</string>
-      </property>
-      <attribute name="buttonGroup">
-       <string notr="true">numberGroup</string>
-      </attribute>
-     </widget>
-    </item>
-    <item row="3" column="3">
-     <widget class="QPushButton" name="Inverse">
+    <item row="3" column="1">
+     <widget class="QPushButton" name="SquareRoot">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
         <horstretch>0</horstretch>
@@ -533,7 +168,7 @@ QPushButton:pressed {
 }</string>
       </property>
       <property name="text">
-       <string>1/x</string>
+       <string>sqrt</string>
       </property>
       <attribute name="buttonGroup">
        <string notr="true">mathFunctionGroup</string>
@@ -572,166 +207,6 @@ QPushButton:pressed {
       </attribute>
      </widget>
     </item>
-    <item row="3" column="0">
-     <widget class="QPushButton" name="Square">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::NoFocus</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: #1E8449;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: #196F3D;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>x^2</string>
-      </property>
-      <attribute name="buttonGroup">
-       <string notr="true">mathFunctionGroup</string>
-      </attribute>
-     </widget>
-    </item>
-    <item row="5" column="3">
-     <widget class="QPushButton" name="Divide">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::NoFocus</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: #1E8449;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: #196F3D;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>/</string>
-      </property>
-      <attribute name="buttonGroup">
-       <string notr="true">mathFunctionGroup</string>
-      </attribute>
-     </widget>
-    </item>
-    <item row="7" column="3">
-     <widget class="QPushButton" name="Multiply">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::NoFocus</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: #1E8449;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: #196F3D;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>*</string>
-      </property>
-      <attribute name="buttonGroup">
-       <string notr="true">mathFunctionGroup</string>
-      </attribute>
-     </widget>
-    </item>
-    <item row="9" column="1">
-     <widget class="QPushButton" name="Button2">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::ClickFocus</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: darkgray;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: Dimgray;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>2</string>
-      </property>
-      <attribute name="buttonGroup">
-       <string notr="true">numberGroup</string>
-      </attribute>
-     </widget>
-    </item>
-    <item row="9" column="0">
-     <widget class="QPushButton" name="Button1">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::ClickFocus</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: darkgray;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: Dimgray;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>1</string>
-      </property>
-      <attribute name="buttonGroup">
-       <string notr="true">numberGroup</string>
-      </attribute>
-     </widget>
-    </item>
     <item row="4" column="3">
      <widget class="QPushButton" name="LogBase2">
       <property name="sizePolicy">
@@ -758,6 +233,70 @@ QPushButton:pressed {
       </property>
       <property name="text">
        <string>log_2</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">mathFunctionGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QPushButton" name="Swap">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: #FFA500;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: #D68910;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Swap</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">stackFunctionGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QPushButton" name="YtoX">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: #1E8449;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: #196F3D;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>y^x</string>
       </property>
       <attribute name="buttonGroup">
        <string notr="true">mathFunctionGroup</string>
@@ -796,8 +335,40 @@ QPushButton:pressed {
       </attribute>
      </widget>
     </item>
-    <item row="4" column="0">
-     <widget class="QPushButton" name="ChangeSign">
+    <item row="11" column="2">
+     <widget class="QPushButton" name="DecimalPoint">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: darkgray;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: Dimgray;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>.</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">numberGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="QPushButton" name="Inverse">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
         <horstretch>0</horstretch>
@@ -821,15 +392,21 @@ QPushButton:pressed {
 }</string>
       </property>
       <property name="text">
-       <string>+/-</string>
+       <string>1/x</string>
       </property>
       <attribute name="buttonGroup">
        <string notr="true">mathFunctionGroup</string>
       </attribute>
      </widget>
     </item>
-    <item row="2" column="3">
-     <widget class="QPushButton" name="Drop">
+    <item row="2" column="1">
+     <widget class="QPushButton" name="RollDn">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="focusPolicy">
        <enum>Qt::NoFocus</enum>
       </property>
@@ -847,10 +424,122 @@ QPushButton:pressed {
 }</string>
       </property>
       <property name="text">
-       <string>Drop</string>
+       <string>Dn</string>
       </property>
       <attribute name="buttonGroup">
        <string notr="true">stackFunctionGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="5">
+     <widget class="QListWidget" name="Display">
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="itemAlignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignRight|Qt::AlignTrailing</set>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="RollUp">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: #FFA500;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: #D68910;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Up</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">stackFunctionGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QPushButton" name="Button5">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: darkgray;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: Dimgray;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>5</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">numberGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="7" column="3">
+     <widget class="QPushButton" name="Multiply">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: #1E8449;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: #196F3D;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>*</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">mathFunctionGroup</string>
       </attribute>
      </widget>
     </item>
@@ -886,40 +575,8 @@ QPushButton:pressed {
       </attribute>
      </widget>
     </item>
-    <item row="2" column="0">
-     <widget class="QPushButton" name="RollUp">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::NoFocus</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	background-color: #FFA500;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-QPushButton:pressed {
-	background-color: #D68910;
-	border: 1px solid gray;
-	padding: 5px;
-}</string>
-      </property>
-      <property name="text">
-       <string>Up</string>
-      </property>
-      <attribute name="buttonGroup">
-       <string notr="true">stackFunctionGroup</string>
-      </attribute>
-     </widget>
-    </item>
-    <item row="11" column="2">
-     <widget class="QPushButton" name="DecimalPoint">
+    <item row="9" column="2">
+     <widget class="QPushButton" name="Button3">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
         <horstretch>0</horstretch>
@@ -943,15 +600,102 @@ QPushButton:pressed {
 }</string>
       </property>
       <property name="text">
-       <string>.</string>
+       <string>3</string>
       </property>
       <attribute name="buttonGroup">
        <string notr="true">numberGroup</string>
       </attribute>
      </widget>
     </item>
-    <item row="3" column="1">
-     <widget class="QPushButton" name="SquareRoot">
+    <item row="3" column="4" rowspan="9">
+     <widget class="QPushButton" name="Enter">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: #FFA500;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: #D68910;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>ENTER</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">stackFunctionGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="QPushButton" name="Drop">
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: #FFA500;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: #D68910;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Drop</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">stackFunctionGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="5">
+     <widget class="QLabel" name="Input">
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #fff;</string>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="margin">
+       <number>2</number>
+      </property>
+      <property name="indent">
+       <number>5</number>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="2">
+     <widget class="QPushButton" name="LogBase10">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
         <horstretch>0</horstretch>
@@ -975,10 +719,266 @@ QPushButton:pressed {
 }</string>
       </property>
       <property name="text">
-       <string>sqrt</string>
+       <string>log_10</string>
       </property>
       <attribute name="buttonGroup">
        <string notr="true">mathFunctionGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="9" column="0">
+     <widget class="QPushButton" name="Button1">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: darkgray;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: Dimgray;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">numberGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QPushButton" name="Button7">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: darkgray;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: Dimgray;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>7</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">numberGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QPushButton" name="ChangeSign">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: #1E8449;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: #196F3D;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>+/-</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">mathFunctionGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="9" column="1">
+     <widget class="QPushButton" name="Button2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: darkgray;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: Dimgray;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">numberGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QPushButton" name="Square">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: #1E8449;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: #196F3D;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>x^2</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">mathFunctionGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QPushButton" name="Button4">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: darkgray;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: Dimgray;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">numberGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QPushButton" name="NaturalLog">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: #1E8449;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: #196F3D;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>ln</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">mathFunctionGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="5" column="2">
+     <widget class="QPushButton" name="Button9">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: darkgray;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+QPushButton:pressed {
+	background-color: Dimgray;
+	border: 1px solid gray;
+	padding: 5px;
+}</string>
+      </property>
+      <property name="text">
+       <string>9</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">numberGroup</string>
       </attribute>
      </widget>
     </item>

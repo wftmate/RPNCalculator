@@ -57,13 +57,20 @@ void Calculator::NumPressed(QAbstractButton *button){
     //QPushButton *button = (QPushButton *)sender();
     QString buttonValue = button->text();
     QString inputValue = ui->Input->text();
+    QString newValue;
     if(static_cast<int>(inputValue.toDouble()) == 0 || inputValue.toDouble() == 0.0)
     {
-        ui->Input->setText(buttonValue);  // put the button value in the lineEdit
+        if(buttonValue == "."){
+            newValue = inputValue + buttonValue;
+        }
+        else
+        {
+            ui->Input->setText(buttonValue);  // put the button value in the lineEdit
+        }
     }
     else
     {
-        QString newValue = inputValue + buttonValue;
+        newValue = inputValue + buttonValue;
         ui->Input->setText(newValue);
 //        double dblNewValue = newValue.toDouble();
 //        ui->Input->setText(QString::number(dblNewValue, 'g', scientificNotation));
@@ -79,12 +86,9 @@ void Calculator::MathButtonPressed(QAbstractButton *button){
     QString buttonValue = button->text();
     double result = NULL;
 
-    qDebug() << "MathButtonPressed: Button = " + buttonValue;
-
     // If there's anything sitting on the lineEdit, add that to the stack first
     if(!ui->Input->text().isEmpty())
     {
-        qDebug() << "Input has text";
         // if input is not empty, put that value in the stack first
         QString inputValue = ui->Input->text();
         ui->Input->clear();
