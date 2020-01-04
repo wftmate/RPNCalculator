@@ -94,6 +94,11 @@ public:
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         Display = new QListWidget(centralWidget);
         Display->setObjectName(QString::fromUtf8("Display"));
+        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(Display->sizePolicy().hasHeightForWidth());
+        Display->setSizePolicy(sizePolicy1);
         Display->setFocusPolicy(Qt::NoFocus);
         Display->setLayoutDirection(Qt::RightToLeft);
         Display->setAlternatingRowColors(true);
@@ -107,11 +112,11 @@ public:
         numberGroup->setObjectName(QString::fromUtf8("numberGroup"));
         numberGroup->addButton(DecimalPoint);
         DecimalPoint->setObjectName(QString::fromUtf8("DecimalPoint"));
-        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(DecimalPoint->sizePolicy().hasHeightForWidth());
-        DecimalPoint->setSizePolicy(sizePolicy1);
+        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(DecimalPoint->sizePolicy().hasHeightForWidth());
+        DecimalPoint->setSizePolicy(sizePolicy2);
         DecimalPoint->setFocusPolicy(Qt::ClickFocus);
         DecimalPoint->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
@@ -132,8 +137,8 @@ public:
         mathFunctionGroup->setObjectName(QString::fromUtf8("mathFunctionGroup"));
         mathFunctionGroup->addButton(Add);
         Add->setObjectName(QString::fromUtf8("Add"));
-        sizePolicy1.setHeightForWidth(Add->sizePolicy().hasHeightForWidth());
-        Add->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(Add->sizePolicy().hasHeightForWidth());
+        Add->setSizePolicy(sizePolicy2);
         Add->setFocusPolicy(Qt::NoFocus);
         Add->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #1E8449;\n"
@@ -152,8 +157,8 @@ public:
         Square = new QPushButton(centralWidget);
         mathFunctionGroup->addButton(Square);
         Square->setObjectName(QString::fromUtf8("Square"));
-        sizePolicy1.setHeightForWidth(Square->sizePolicy().hasHeightForWidth());
-        Square->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(Square->sizePolicy().hasHeightForWidth());
+        Square->setSizePolicy(sizePolicy2);
         Square->setFocusPolicy(Qt::NoFocus);
         Square->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #1E8449;\n"
@@ -174,8 +179,8 @@ public:
         stackFunctionGroup->setObjectName(QString::fromUtf8("stackFunctionGroup"));
         stackFunctionGroup->addButton(Swap);
         Swap->setObjectName(QString::fromUtf8("Swap"));
-        sizePolicy1.setHeightForWidth(Swap->sizePolicy().hasHeightForWidth());
-        Swap->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(Swap->sizePolicy().hasHeightForWidth());
+        Swap->setSizePolicy(sizePolicy2);
         Swap->setFocusPolicy(Qt::NoFocus);
         Swap->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #FFA500;\n"
@@ -194,8 +199,8 @@ public:
         Button3 = new QPushButton(centralWidget);
         numberGroup->addButton(Button3);
         Button3->setObjectName(QString::fromUtf8("Button3"));
-        sizePolicy1.setHeightForWidth(Button3->sizePolicy().hasHeightForWidth());
-        Button3->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(Button3->sizePolicy().hasHeightForWidth());
+        Button3->setSizePolicy(sizePolicy2);
         Button3->setFocusPolicy(Qt::ClickFocus);
         Button3->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
@@ -214,8 +219,8 @@ public:
         Button0 = new QPushButton(centralWidget);
         numberGroup->addButton(Button0);
         Button0->setObjectName(QString::fromUtf8("Button0"));
-        sizePolicy1.setHeightForWidth(Button0->sizePolicy().hasHeightForWidth());
-        Button0->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(Button0->sizePolicy().hasHeightForWidth());
+        Button0->setSizePolicy(sizePolicy2);
         Button0->setFocusPolicy(Qt::ClickFocus);
         Button0->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
@@ -234,8 +239,8 @@ public:
         Button8 = new QPushButton(centralWidget);
         numberGroup->addButton(Button8);
         Button8->setObjectName(QString::fromUtf8("Button8"));
-        sizePolicy1.setHeightForWidth(Button8->sizePolicy().hasHeightForWidth());
-        Button8->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(Button8->sizePolicy().hasHeightForWidth());
+        Button8->setSizePolicy(sizePolicy2);
         Button8->setFocusPolicy(Qt::ClickFocus);
         Button8->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
@@ -254,8 +259,8 @@ public:
         LogBase2 = new QPushButton(centralWidget);
         mathFunctionGroup->addButton(LogBase2);
         LogBase2->setObjectName(QString::fromUtf8("LogBase2"));
-        sizePolicy1.setHeightForWidth(LogBase2->sizePolicy().hasHeightForWidth());
-        LogBase2->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(LogBase2->sizePolicy().hasHeightForWidth());
+        LogBase2->setSizePolicy(sizePolicy2);
         LogBase2->setFocusPolicy(Qt::NoFocus);
         LogBase2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #1E8449;\n"
@@ -274,8 +279,8 @@ public:
         Button9 = new QPushButton(centralWidget);
         numberGroup->addButton(Button9);
         Button9->setObjectName(QString::fromUtf8("Button9"));
-        sizePolicy1.setHeightForWidth(Button9->sizePolicy().hasHeightForWidth());
-        Button9->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(Button9->sizePolicy().hasHeightForWidth());
+        Button9->setSizePolicy(sizePolicy2);
         Button9->setFocusPolicy(Qt::ClickFocus);
         Button9->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
@@ -294,8 +299,8 @@ public:
         Button1 = new QPushButton(centralWidget);
         numberGroup->addButton(Button1);
         Button1->setObjectName(QString::fromUtf8("Button1"));
-        sizePolicy1.setHeightForWidth(Button1->sizePolicy().hasHeightForWidth());
-        Button1->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(Button1->sizePolicy().hasHeightForWidth());
+        Button1->setSizePolicy(sizePolicy2);
         Button1->setFocusPolicy(Qt::ClickFocus);
         Button1->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
@@ -314,11 +319,11 @@ public:
         Drop = new QPushButton(centralWidget);
         stackFunctionGroup->addButton(Drop);
         Drop->setObjectName(QString::fromUtf8("Drop"));
-        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Fixed);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(Drop->sizePolicy().hasHeightForWidth());
-        Drop->setSizePolicy(sizePolicy2);
+        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(Drop->sizePolicy().hasHeightForWidth());
+        Drop->setSizePolicy(sizePolicy3);
         Drop->setFocusPolicy(Qt::NoFocus);
         Drop->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #FFA500;\n"
@@ -337,8 +342,8 @@ public:
         NaturalLog = new QPushButton(centralWidget);
         mathFunctionGroup->addButton(NaturalLog);
         NaturalLog->setObjectName(QString::fromUtf8("NaturalLog"));
-        sizePolicy1.setHeightForWidth(NaturalLog->sizePolicy().hasHeightForWidth());
-        NaturalLog->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(NaturalLog->sizePolicy().hasHeightForWidth());
+        NaturalLog->setSizePolicy(sizePolicy2);
         NaturalLog->setFocusPolicy(Qt::NoFocus);
         NaturalLog->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #1E8449;\n"
@@ -357,8 +362,8 @@ public:
         RollUp = new QPushButton(centralWidget);
         stackFunctionGroup->addButton(RollUp);
         RollUp->setObjectName(QString::fromUtf8("RollUp"));
-        sizePolicy1.setHeightForWidth(RollUp->sizePolicy().hasHeightForWidth());
-        RollUp->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(RollUp->sizePolicy().hasHeightForWidth());
+        RollUp->setSizePolicy(sizePolicy2);
         RollUp->setFocusPolicy(Qt::NoFocus);
         RollUp->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #FFA500;\n"
@@ -377,8 +382,8 @@ public:
         Multiply = new QPushButton(centralWidget);
         mathFunctionGroup->addButton(Multiply);
         Multiply->setObjectName(QString::fromUtf8("Multiply"));
-        sizePolicy1.setHeightForWidth(Multiply->sizePolicy().hasHeightForWidth());
-        Multiply->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(Multiply->sizePolicy().hasHeightForWidth());
+        Multiply->setSizePolicy(sizePolicy2);
         Multiply->setFocusPolicy(Qt::NoFocus);
         Multiply->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #1E8449;\n"
@@ -397,8 +402,8 @@ public:
         Enter = new QPushButton(centralWidget);
         stackFunctionGroup->addButton(Enter);
         Enter->setObjectName(QString::fromUtf8("Enter"));
-        sizePolicy1.setHeightForWidth(Enter->sizePolicy().hasHeightForWidth());
-        Enter->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(Enter->sizePolicy().hasHeightForWidth());
+        Enter->setSizePolicy(sizePolicy2);
         Enter->setFocusPolicy(Qt::NoFocus);
         Enter->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #FFA500;\n"
@@ -417,8 +422,8 @@ public:
         Button5 = new QPushButton(centralWidget);
         numberGroup->addButton(Button5);
         Button5->setObjectName(QString::fromUtf8("Button5"));
-        sizePolicy1.setHeightForWidth(Button5->sizePolicy().hasHeightForWidth());
-        Button5->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(Button5->sizePolicy().hasHeightForWidth());
+        Button5->setSizePolicy(sizePolicy2);
         Button5->setFocusPolicy(Qt::ClickFocus);
         Button5->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
@@ -437,8 +442,8 @@ public:
         SquareRoot = new QPushButton(centralWidget);
         mathFunctionGroup->addButton(SquareRoot);
         SquareRoot->setObjectName(QString::fromUtf8("SquareRoot"));
-        sizePolicy1.setHeightForWidth(SquareRoot->sizePolicy().hasHeightForWidth());
-        SquareRoot->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(SquareRoot->sizePolicy().hasHeightForWidth());
+        SquareRoot->setSizePolicy(sizePolicy2);
         SquareRoot->setFocusPolicy(Qt::NoFocus);
         SquareRoot->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #1E8449;\n"
@@ -457,8 +462,8 @@ public:
         ClearAll = new QPushButton(centralWidget);
         stackFunctionGroup->addButton(ClearAll);
         ClearAll->setObjectName(QString::fromUtf8("ClearAll"));
-        sizePolicy1.setHeightForWidth(ClearAll->sizePolicy().hasHeightForWidth());
-        ClearAll->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(ClearAll->sizePolicy().hasHeightForWidth());
+        ClearAll->setSizePolicy(sizePolicy2);
         ClearAll->setFocusPolicy(Qt::NoFocus);
         ClearAll->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #FFA500;\n"
@@ -477,8 +482,8 @@ public:
         RollDn = new QPushButton(centralWidget);
         stackFunctionGroup->addButton(RollDn);
         RollDn->setObjectName(QString::fromUtf8("RollDn"));
-        sizePolicy1.setHeightForWidth(RollDn->sizePolicy().hasHeightForWidth());
-        RollDn->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(RollDn->sizePolicy().hasHeightForWidth());
+        RollDn->setSizePolicy(sizePolicy2);
         RollDn->setFocusPolicy(Qt::NoFocus);
         RollDn->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #FFA500;\n"
@@ -512,8 +517,8 @@ public:
         Inverse = new QPushButton(centralWidget);
         mathFunctionGroup->addButton(Inverse);
         Inverse->setObjectName(QString::fromUtf8("Inverse"));
-        sizePolicy1.setHeightForWidth(Inverse->sizePolicy().hasHeightForWidth());
-        Inverse->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(Inverse->sizePolicy().hasHeightForWidth());
+        Inverse->setSizePolicy(sizePolicy2);
         Inverse->setFocusPolicy(Qt::NoFocus);
         Inverse->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #1E8449;\n"
@@ -532,8 +537,8 @@ public:
         Button4 = new QPushButton(centralWidget);
         numberGroup->addButton(Button4);
         Button4->setObjectName(QString::fromUtf8("Button4"));
-        sizePolicy1.setHeightForWidth(Button4->sizePolicy().hasHeightForWidth());
-        Button4->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(Button4->sizePolicy().hasHeightForWidth());
+        Button4->setSizePolicy(sizePolicy2);
         Button4->setFocusPolicy(Qt::ClickFocus);
         Button4->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
@@ -552,8 +557,8 @@ public:
         Button2 = new QPushButton(centralWidget);
         numberGroup->addButton(Button2);
         Button2->setObjectName(QString::fromUtf8("Button2"));
-        sizePolicy1.setHeightForWidth(Button2->sizePolicy().hasHeightForWidth());
-        Button2->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(Button2->sizePolicy().hasHeightForWidth());
+        Button2->setSizePolicy(sizePolicy2);
         Button2->setFocusPolicy(Qt::ClickFocus);
         Button2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
@@ -572,8 +577,8 @@ public:
         ChangeSign = new QPushButton(centralWidget);
         mathFunctionGroup->addButton(ChangeSign);
         ChangeSign->setObjectName(QString::fromUtf8("ChangeSign"));
-        sizePolicy1.setHeightForWidth(ChangeSign->sizePolicy().hasHeightForWidth());
-        ChangeSign->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(ChangeSign->sizePolicy().hasHeightForWidth());
+        ChangeSign->setSizePolicy(sizePolicy2);
         ChangeSign->setFocusPolicy(Qt::NoFocus);
         ChangeSign->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #1E8449;\n"
@@ -592,8 +597,8 @@ public:
         Subtract = new QPushButton(centralWidget);
         mathFunctionGroup->addButton(Subtract);
         Subtract->setObjectName(QString::fromUtf8("Subtract"));
-        sizePolicy1.setHeightForWidth(Subtract->sizePolicy().hasHeightForWidth());
-        Subtract->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(Subtract->sizePolicy().hasHeightForWidth());
+        Subtract->setSizePolicy(sizePolicy2);
         Subtract->setFocusPolicy(Qt::NoFocus);
         Subtract->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #1E8449;\n"
@@ -612,8 +617,8 @@ public:
         YtoX = new QPushButton(centralWidget);
         mathFunctionGroup->addButton(YtoX);
         YtoX->setObjectName(QString::fromUtf8("YtoX"));
-        sizePolicy1.setHeightForWidth(YtoX->sizePolicy().hasHeightForWidth());
-        YtoX->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(YtoX->sizePolicy().hasHeightForWidth());
+        YtoX->setSizePolicy(sizePolicy2);
         YtoX->setFocusPolicy(Qt::NoFocus);
         YtoX->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #1E8449;\n"
@@ -632,8 +637,8 @@ public:
         Button7 = new QPushButton(centralWidget);
         numberGroup->addButton(Button7);
         Button7->setObjectName(QString::fromUtf8("Button7"));
-        sizePolicy1.setHeightForWidth(Button7->sizePolicy().hasHeightForWidth());
-        Button7->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(Button7->sizePolicy().hasHeightForWidth());
+        Button7->setSizePolicy(sizePolicy2);
         Button7->setFocusPolicy(Qt::ClickFocus);
         Button7->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
@@ -652,8 +657,8 @@ public:
         Divide = new QPushButton(centralWidget);
         mathFunctionGroup->addButton(Divide);
         Divide->setObjectName(QString::fromUtf8("Divide"));
-        sizePolicy1.setHeightForWidth(Divide->sizePolicy().hasHeightForWidth());
-        Divide->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(Divide->sizePolicy().hasHeightForWidth());
+        Divide->setSizePolicy(sizePolicy2);
         Divide->setFocusPolicy(Qt::NoFocus);
         Divide->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #1E8449;\n"
@@ -672,8 +677,8 @@ public:
         LogBase10 = new QPushButton(centralWidget);
         mathFunctionGroup->addButton(LogBase10);
         LogBase10->setObjectName(QString::fromUtf8("LogBase10"));
-        sizePolicy1.setHeightForWidth(LogBase10->sizePolicy().hasHeightForWidth());
-        LogBase10->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(LogBase10->sizePolicy().hasHeightForWidth());
+        LogBase10->setSizePolicy(sizePolicy2);
         LogBase10->setFocusPolicy(Qt::NoFocus);
         LogBase10->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: #1E8449;\n"
@@ -692,8 +697,8 @@ public:
         Button6 = new QPushButton(centralWidget);
         numberGroup->addButton(Button6);
         Button6->setObjectName(QString::fromUtf8("Button6"));
-        sizePolicy1.setHeightForWidth(Button6->sizePolicy().hasHeightForWidth());
-        Button6->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(Button6->sizePolicy().hasHeightForWidth());
+        Button6->setSizePolicy(sizePolicy2);
         Button6->setFocusPolicy(Qt::ClickFocus);
         Button6->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	background-color: darkgray;\n"
@@ -715,8 +720,8 @@ public:
         menuBar->setGeometry(QRect(0, 0, 330, 21));
         menuMenu = new QMenu(menuBar);
         menuMenu->setObjectName(QString::fromUtf8("menuMenu"));
-        sizePolicy1.setHeightForWidth(menuMenu->sizePolicy().hasHeightForWidth());
-        menuMenu->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(menuMenu->sizePolicy().hasHeightForWidth());
+        menuMenu->setSizePolicy(sizePolicy2);
         Calculator->setMenuBar(menuBar);
         mainToolBar = new QToolBar(Calculator);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
